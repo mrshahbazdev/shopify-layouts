@@ -1,19 +1,17 @@
 # Shopify Theme Submission Guide
 
-This guide will walk you through the process of submitting your **Luxe Mega Theme** to the Shopify Theme Store.
+This guide will walk you through the process of submitting your **Luxe Mega** theme to the Shopify Theme Store.
 
 ## Prerequisites
 
 1.  **Shopify Partner Account**: You must have a [Shopify Partner Account](https://partners.shopify.com/). If you don't have one, sign up for free.
-2.  **Theme Files**: The complete theme code is located in the `shopify_theme/` folder of this repository. A ready-to-upload zip file `luxe_mega_theme.zip` has also been generated for you.
+2.  **Theme Files**: The complete theme code is located in the `shopify_theme/` folder. A ready-to-upload zip file `luxe_mega_theme.zip` is included in the `complete_submission_package.zip`.
 
 ## Step 1: Validate Your Theme
 
-Before submitting, it is highly recommended to run Shopify's automated checks to ensure your theme meets the technical requirements.
+Before submitting, it is highly recommended to run Shopify's automated checks.
 
 ### Using Shopify CLI (Recommended)
-If you have the [Shopify CLI](https://shopify.dev/docs/themes/tools/cli) installed:
-
 1.  Navigate to the theme directory:
     ```bash
     cd shopify_theme
@@ -22,49 +20,38 @@ If you have the [Shopify CLI](https://shopify.dev/docs/themes/tools/cli) install
     ```bash
     shopify theme check
     ```
-3.  Fix any errors or warnings reported. Common issues include:
-    *   Missing translations in `locales/`.
-    *   Hardcoded URLs (ensure you use `asset_url` filters).
-    *   Missing `width` and `height` attributes on images (use `image_url` filter parameters).
 
 ## Step 2: Prepare the Zip File
 
-Shopify accepts themes in `.zip` format.
-*   **We have generated this for you:** The file `luxe_mega_theme.zip` in the root of this project contains all the necessary files.
-*   **Manual Method:** If you modify the files and need to zip it again, ensure you zip the *contents* of the `shopify_theme` folder, not the folder itself.
-    ```bash
-    cd shopify_theme
-    zip -r ../luxe_mega_theme.zip *
-    ```
+*   **Ready-to-use:** Use the `luxe_mega_theme.zip` file included in this package.
 
 ## Step 3: Upload to Partner Dashboard
 
 1.  Log in to your [Shopify Partner Dashboard](https://partners.shopify.com/).
-2.  Go to **Themes** in the left sidebar.
-3.  Click **Submit a theme**.
-4.  Enter the **Theme Name** (e.g., "Luxe").
-5.  Upload the `luxe_mega_theme.zip` file.
-6.  Fill in the required details:
-    *   **Description**: Describe the theme's style (Modern, Minimal, etc.) and target industries.
-    *   **Price**: Set your desired price (usually between $180 - $350 USD).
-    *   **Features**: Select the features your theme supports (e.g., Slideshow, Video, FAQ, etc.).
+2.  Go to **Themes** > **Submit a theme**.
+3.  Upload the `luxe_mega_theme.zip` file.
 
-## Step 4: The Review Process
+## Step 4: Fill in Listing Details
 
-Once submitted, Shopify's Theme Team will review your theme. This process can take **several weeks**.
+Use the following information to fill out the submission form:
 
-### Common Rejection Reasons to Avoid:
-*   **Performance**: Low Lighthouse scores (aim for >90 on Performance, Accessibility, SEO).
-*   **Accessibility**: Missing `aria-labels`, poor color contrast, or no keyboard navigation support.
-*   **Settings**: Hardcoded values instead of using the Theme Editor settings. (We fixed this in `theme.liquid`).
-*   **Empty States**: Sections looking broken when no content is added. (We added placeholders to most sections).
+### Overview
+*   **Demo Store URL**: `https://test.com` (Note: You should ideally replace this with your own development store URL).
+*   **Tagline**: `An editorial-inspired theme made for publishers`
 
-## Step 5: Publishing
+### Industry & Catalog
+*   **Industry**: Clothing & Accessories (or Fashion)
+*   **Merchant Catalog Size**: Medium to Large (50-500 products)
 
-If approved:
-1.  You will receive an email from Shopify.
-2.  You may need to make minor requested changes.
-3.  Once finalized, your theme will be listed on the Shopify Theme Store!
+### Screenshots
+We have generated the required screenshots for you in the `submission_assets/` folder:
+*   **Mobile Screenshot**: Upload `mobile_screenshot.png` (750px x 1334px).
+*   **Desktop Screenshot**: Upload `desktop_screenshot.png` (1000px x 1248px).
+
+## Step 5: The Review Process
+
+Once submitted, Shopify's Theme Team will review your theme. This process can take several weeks.
+Ensure your settings allow for customization (we implemented this via `settings_schema.json`) and that all strings are translatable (we set up the infrastructure in `locales/`).
 
 ---
 
