@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 1: Minimalist Fashion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#f4f4f4',
+                        accent: '#d4a373'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-primary antialiased">
+
+    <!-- Announcement Bar -->
+    <div class="bg-primary text-white text-xs text-center py-2 tracking-widest uppercase">
+        Free Shipping on Orders Over $100
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-semibold tracking-tighter uppercase">Muse</a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-black transition">New Arrivals</a>
+                <a href="#" class="hover:text-black transition">Shop</a>
+                <a href="#" class="hover:text-black transition">Collections</a>
+                <a href="#" class="hover:text-black transition">Editorial</a>
+            </nav>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-4">
+                <button class="hover:text-gray-600"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="hover:text-gray-600"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-[80vh] bg-gray-100 overflow-hidden">
+        <div class="absolute inset-0">
+             <!-- Placeholder for a high-res fashion image -->
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=2070&auto=format&fit=crop" alt="Hero" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/10"></div>
+        </div>
+        <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-start">
+            <h1 class="text-5xl md:text-7xl font-light text-white mb-6 leading-tight">
+                Essence of <br> <span class="font-semibold">Simplicity</span>
+            </h1>
+            <a href="#" class="bg-white text-black px-8 py-3 text-sm font-medium hover:bg-black hover:text-white transition duration-300">
+                Shop Collection
+            </a>
+        </div>
+    </section>
+
+    <!-- Marquee Text (Modern Touch) -->
+    <div class="overflow-hidden py-4 border-b border-gray-100 bg-white">
+        <div class="whitespace-nowrap animate-marquee inline-block">
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">Sustainable Materials</span>
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">•</span>
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">Ethically Sourced</span>
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">•</span>
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">Modern Design</span>
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">•</span>
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">Sustainable Materials</span>
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">•</span>
+            <span class="mx-4 text-sm font-medium uppercase tracking-widest text-gray-500">Ethically Sourced</span>
+        </div>
+    </div>
+
+    <!-- Featured Products Grid -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-10">
+                <h2 class="text-3xl font-light">New Arrivals</h2>
+                <a href="#" class="text-sm underline underline-offset-4 hover:text-gray-600">View All</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1548863227-3af567e9589d?auto=format&fit=crop&q=80&w=600" alt="Product" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="text-sm font-medium">Linen Blend Jacket</h3>
+                    <p class="text-sm text-gray-500">$120.00</p>
+                </div>
+                <!-- Product 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1574634534894-89d7576c8259?auto=format&fit=crop&q=80&w=600" alt="Product" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="text-sm font-medium">Cotton Overshirt</h3>
+                    <p class="text-sm text-gray-500">$85.00</p>
+                </div>
+                <!-- Product 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1516762689617-e1cffcef479d?auto=format&fit=crop&q=80&w=600" alt="Product" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                         <span class="absolute top-4 left-4 bg-black text-white text-xs px-2 py-1">New</span>
+                        <button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="text-sm font-medium">Essential Tee</h3>
+                    <p class="text-sm text-gray-500">$35.00</p>
+                </div>
+                <!-- Product 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1550928431-ee0ec6db30d3?auto=format&fit=crop&q=80&w=600" alt="Product" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition translate-y-2 group-hover:translate-y-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="text-sm font-medium">Tailored Trousers</h3>
+                    <p class="text-sm text-gray-500">$110.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial / Image with Text -->
+    <section class="py-10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=1000" alt="Editorial" class="w-full h-auto object-cover">
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-400">Our Philosophy</span>
+                    <h2 class="text-4xl font-light">Designed for <br> Longevity</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        We believe in clothes that last. Our collection is crafted from premium materials that stand the test of time, reducing waste and encouraging a more sustainable approach to fashion.
+                    </p>
+                    <a href="#" class="inline-block border-b border-black pb-1 text-sm hover:text-gray-600 hover:border-gray-600 transition">Read Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories / Collections -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-light mb-10 text-center">Shop by Category</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <a href="#" class="relative h-96 group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Women">
+                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <span class="text-white text-xl font-medium tracking-wide">Women</span>
+                    </div>
+                </a>
+                <a href="#" class="relative h-96 group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Men">
+                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <span class="text-white text-xl font-medium tracking-wide">Men</span>
+                    </div>
+                </a>
+                <a href="#" class="relative h-96 group overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1592997571659-0b21ff643243?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Accessories">
+                    <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                        <span class="text-white text-xl font-medium tracking-wide">Accessories</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h4 class="text-lg font-bold mb-6">MUSE.</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Defining modern minimalism through thoughtful design and sustainable practices.</p>
+                </div>
+                <div>
+                    <h5 class="text-sm font-bold uppercase tracking-widest mb-6">Shop</h5>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">New Arrivals</a></li>
+                        <li><a href="#" class="hover:text-white transition">Best Sellers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Sale</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-sm font-bold uppercase tracking-widest mb-6">Support</h5>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition">Shipping</a></li>
+                        <li><a href="#" class="hover:text-white transition">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-sm font-bold uppercase tracking-widest mb-6">Newsletter</h5>
+                    <p class="text-sm text-gray-400 mb-4">Subscribe to receive updates.</p>
+                    <form class="flex border-b border-gray-600 pb-2">
+                        <input type="email" placeholder="Email address" class="bg-transparent w-full focus:outline-none text-white placeholder-gray-500 text-sm">
+                        <button class="text-xs uppercase font-bold text-gray-400 hover:text-white">Join</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2023 Muse Store. All rights reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

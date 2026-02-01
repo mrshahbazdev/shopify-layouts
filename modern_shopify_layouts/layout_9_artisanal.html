@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 9: Crafted & Co. - Shopify Modern Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Crimson Text', 'serif'],
+                        'sans': ['DM Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        'paper': '#FDFBF7',
+                        'rust': '#BC5D41',
+                        'sage': '#8A9A5B',
+                        'charcoal': '#2C2C2C',
+                        'clay': '#E6DCCF',
+                    },
+                    backgroundImage: {
+                        'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hand-drawn-border {
+            border: 2px solid #2C2C2C;
+            border-radius: 2px 255px 3px 25px / 255px 5px 225px 2px;
+        }
+        .text-underline-squiggle {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%23BC5D41' d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+            background-position: bottom;
+            background-size: 20px auto;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body class="bg-paper text-charcoal font-sans antialiased relative">
+    <div class="fixed inset-0 bg-noise pointer-events-none z-50 mix-blend-multiply"></div>
+
+    <!-- Announcement -->
+    <div class="bg-charcoal text-paper text-center py-3 text-sm font-medium tracking-wide">
+        Handmade in small batches. Restock every Sunday at 9AM.
+    </div>
+
+    <!-- Header -->
+    <header class="py-8 border-b border-charcoal/10 relative z-40">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <nav class="flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-rust transition-colors">Shop All</a>
+                <a href="#" class="hover:text-rust transition-colors">Ceramics</a>
+                <a href="#" class="hover:text-rust transition-colors">Linens</a>
+            </nav>
+
+            <a href="#" class="text-4xl font-serif italic text-charcoal">Crafted & Co.</a>
+
+            <div class="flex space-x-6 text-sm font-medium text-gray-600 items-center">
+                <a href="#" class="hover:text-rust transition-colors">Journal</a>
+                <a href="#" class="hover:text-rust transition-colors">About</a>
+                <button class="flex items-center gap-1 hover:text-rust transition-colors">
+                    <span>Cart (0)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" alt="Ceramics being made" class="hand-drawn-border w-full object-cover shadow-lg">
+                    <p class="text-center text-xs text-gray-500 mt-2 italic font-serif">Process: Shaping the clay for the Autumn Collection</p>
+                </div>
+                <div class="order-1 md:order-2 space-y-8 text-center md:text-left">
+                    <h2 class="text-rust font-serif italic text-2xl">The Autumn Collection</h2>
+                    <h1 class="text-5xl md:text-7xl font-serif text-charcoal leading-none">
+                        Beauty in <br> <span class="text-underline-squiggle">Imperfection</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 leading-relaxed max-w-md mx-auto md:mx-0">
+                        Objects made by hand, designed to bring warmth and intention to your daily rituals. Each piece is unique, just like the moment you use it.
+                    </p>
+                    <a href="#" class="inline-block bg-charcoal text-white px-8 py-4 font-medium hover:bg-rust transition-colors rounded-sm">
+                        Shop the Collection
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="py-20 bg-clay/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-serif text-charcoal mb-4">Slow Made Goods</h2>
+                <div class="w-16 h-1 bg-rust mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1616486029423-aaa478965c97?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Vase" class="w-full aspect-[4/5] object-cover hand-drawn-border transition-transform duration-700 group-hover:scale-[1.02]">
+                        <div class="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                             <button class="w-full bg-paper text-charcoal py-3 font-medium shadow-md hover:bg-rust hover:text-white transition-colors">Add to Cart - $48</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-serif text-2xl text-charcoal group-hover:text-rust transition-colors">Speckled Vase</h3>
+                        <p class="text-sm text-gray-500 mt-1">Stoneware</p>
+                    </div>
+                </div>
+
+                 <!-- Product 2 -->
+                 <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1590422749842-5c0228741366?ixlib=rb-4.0.3&auto=format&fit=crop&w=987&q=80" alt="Mug" class="w-full aspect-[4/5] object-cover hand-drawn-border transition-transform duration-700 group-hover:scale-[1.02]">
+                        <div class="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                             <button class="w-full bg-paper text-charcoal py-3 font-medium shadow-md hover:bg-rust hover:text-white transition-colors">Add to Cart - $32</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-serif text-2xl text-charcoal group-hover:text-rust transition-colors">Morning Mug</h3>
+                        <p class="text-sm text-gray-500 mt-1">Glazed Clay</p>
+                    </div>
+                </div>
+
+                 <!-- Product 3 -->
+                 <div class="group">
+                    <div class="relative overflow-hidden mb-6">
+                        <img src="https://images.unsplash.com/photo-1617801389868-6934c264c09d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Plate" class="w-full aspect-[4/5] object-cover hand-drawn-border transition-transform duration-700 group-hover:scale-[1.02]">
+                        <div class="absolute inset-0 flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                             <button class="w-full bg-paper text-charcoal py-3 font-medium shadow-md hover:bg-rust hover:text-white transition-colors">Add to Cart - $42</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-serif text-2xl text-charcoal group-hover:text-rust transition-colors">Dinner Plate</h3>
+                        <p class="text-sm text-gray-500 mt-1">Raw Edge</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="#" class="inline-block border-b border-charcoal text-charcoal pb-1 hover:text-rust hover:border-rust transition-colors">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story / Signature -->
+    <section class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="bg-sage/10 p-12 md:p-20 hand-drawn-border flex flex-col items-center text-center">
+                <h2 class="font-serif text-3xl md:text-4xl text-charcoal mb-6 italic">From our hands to yours</h2>
+                <p class="text-lg text-gray-700 leading-loose max-w-2xl mb-10">
+                    "We believe that the things we use every day should bring us joy. That's why we spend hours shaping, glazing, and firing each piece in our small studio. No two are exactly alike, and that's exactly how we like it."
+                </p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Signature_sample.svg/1200px-Signature_sample.svg.png" alt="Signature" class="h-16 opacity-60">
+                <p class="text-xs font-bold uppercase tracking-widest mt-4 text-rust">Sarah & Tom, Makers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-paper pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-700 pb-12">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-serif italic">Crafted & Co.</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Small batch ceramics and home goods, handmade in Portland, Oregon.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-rust text-sm uppercase tracking-wider">Explore</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-paper transition-colors">Shop All</a></li>
+                        <li><a href="#" class="hover:text-paper transition-colors">Our Story</a></li>
+                        <li><a href="#" class="hover:text-paper transition-colors">Care Guide</a></li>
+                        <li><a href="#" class="hover:text-paper transition-colors">Journal</a></li>
+                    </ul>
+                </div>
+                <div>
+                     <h4 class="font-bold mb-6 text-rust text-sm uppercase tracking-wider">Stay in the loop</h4>
+                     <p class="text-gray-400 text-sm mb-4">Join our newsletter for early access to restocks.</p>
+                     <div class="flex border-b border-gray-600 pb-2">
+                         <input type="email" placeholder="Your email" class="bg-transparent w-full outline-none text-paper placeholder-gray-600">
+                         <button class="text-gray-400 hover:text-white uppercase text-xs font-bold">Subscribe</button>
+                     </div>
+                </div>
+            </div>
+            <div class="pt-8 flex justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2023 Crafted & Co.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-paper">Instagram</a>
+                    <a href="#" class="hover:text-paper">Pinterest</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

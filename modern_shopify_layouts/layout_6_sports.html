@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 6: Pulse Activewear - Shopify Modern Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'display': ['Teko', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'neon-lime': '#ccff00',
+                        'electric-blue': '#0066ff',
+                        'dark-metal': '#111111',
+                    },
+                    skew: {
+                        '-10': '-10deg',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .skew-section {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .skew-section-reverse {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-dark-metal text-white font-body overflow-x-hidden">
+
+    <!-- Announcement Bar -->
+    <div class="bg-electric-blue text-white text-xs font-bold py-2 text-center uppercase tracking-widest">
+        Free Shipping on Orders Over $150 — Train Harder
+    </div>
+
+    <!-- Header -->
+    <header class="absolute top-0 w-full z-50 p-6 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent">
+        <a href="#" class="text-4xl font-display font-bold italic tracking-tighter text-neon-lime">PULSE.</a>
+
+        <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wider">
+            <a href="#" class="hover:text-neon-lime transition-colors">Men</a>
+            <a href="#" class="hover:text-neon-lime transition-colors">Women</a>
+            <a href="#" class="hover:text-neon-lime transition-colors">Gear</a>
+            <a href="#" class="hover:text-neon-lime transition-colors">Collections</a>
+        </nav>
+
+        <div class="flex items-center space-x-6">
+            <button class="hover:text-neon-lime">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+            <button class="hover:text-neon-lime relative">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                </svg>
+                <span class="absolute -top-1 -right-1 bg-neon-lime text-black text-[10px] font-bold px-1 rounded-full">2</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full overflow-hidden flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Gym Workout" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40 bg-gradient-to-r from-black/80 via-transparent to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto px-6 grid grid-cols-1 md:grid-cols-2">
+            <div class="space-y-4">
+                <h2 class="text-neon-lime text-xl font-bold uppercase tracking-[0.2em] animate-pulse">New Arrival</h2>
+                <h1 class="text-7xl md:text-9xl font-display font-bold italic uppercase leading-[0.85]">
+                    Unleash <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Power</span>
+                </h1>
+                <p class="text-gray-300 max-w-md text-lg italic">
+                    Engineered for high-intensity performance. The new Velocity Series is here to break limits.
+                </p>
+                <div class="pt-6">
+                    <a href="#" class="inline-block bg-neon-lime text-black font-black uppercase italic text-xl px-10 py-4 transform -skew-x-12 hover:skew-x-0 transition-transform duration-300">
+                        <span class="inline-block skew-x-12">Shop Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrolling Marquee -->
+    <div class="bg-neon-lime text-black font-display font-bold text-4xl py-4 overflow-hidden whitespace-nowrap -rotate-1 origin-left border-y-4 border-black z-20 relative">
+        <div class="inline-block animate-marquee">
+            NO PAIN NO GAIN // PUSH YOUR LIMITS // DEFINE YOURSELF // BE UNSTOPPABLE //
+            NO PAIN NO GAIN // PUSH YOUR LIMITS // DEFINE YOURSELF // BE UNSTOPPABLE //
+        </div>
+    </div>
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+
+    <!-- Featured Categories (Skewed) -->
+    <section class="py-20 bg-dark-metal relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="group relative h-[500px] overflow-hidden transform transition-all duration-500 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Training">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-5xl font-display font-bold italic text-white group-hover:text-neon-lime transition-colors">TRAINING</h3>
+                        <a href="#" class="text-white uppercase font-bold text-sm tracking-widest mt-2 flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Explore <span class="text-neon-lime">→</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group relative h-[500px] overflow-hidden transform transition-all duration-500 hover:-translate-y-2 md:mt-12">
+                    <img src="https://images.unsplash.com/photo-1552674605-46955594216e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Running">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-5xl font-display font-bold italic text-white group-hover:text-neon-lime transition-colors">RUNNING</h3>
+                        <a href="#" class="text-white uppercase font-bold text-sm tracking-widest mt-2 flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Explore <span class="text-neon-lime">→</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="group relative h-[500px] overflow-hidden transform transition-all duration-500 hover:-translate-y-2">
+                    <img src="https://images.unsplash.com/photo-1517963879466-db09ab796606?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0" alt="Lifestyle">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-8">
+                        <h3 class="text-5xl font-display font-bold italic text-white group-hover:text-neon-lime transition-colors">LIFESTYLE</h3>
+                        <a href="#" class="text-white uppercase font-bold text-sm tracking-widest mt-2 flex items-center gap-2 group-hover:gap-4 transition-all">
+                            Explore <span class="text-neon-lime">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid with Timers -->
+    <section class="py-24 bg-zinc-900 skew-section-reverse">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-6xl font-display font-bold italic uppercase">Weekly <span class="text-outline">Drops</span></h2>
+                <a href="#" class="text-neon-lime font-bold uppercase tracking-widest border-b-2 border-neon-lime pb-1 hover:text-white hover:border-white transition-all">View All</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-dark-metal p-4 group">
+                    <div class="relative h-80 mb-4 bg-gray-800 overflow-hidden">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-xs font-bold px-2 py-1 uppercase italic">Fast Selling</div>
+                        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=764&q=80" class="w-full h-full object-cover mix-blend-overlay opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Shoe">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg uppercase italic">Zoom Runner X</h3>
+                            <p class="text-gray-400 text-sm">Men's Running</p>
+                        </div>
+                        <span class="text-neon-lime font-display font-bold text-2xl">$120</span>
+                    </div>
+                    <button class="w-full mt-4 bg-white text-black font-bold uppercase italic py-2 hover:bg-neon-lime transition-colors">Add to Cart</button>
+                </div>
+                 <!-- Product 2 -->
+                 <div class="bg-dark-metal p-4 group">
+                    <div class="relative h-80 mb-4 bg-gray-800 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" class="w-full h-full object-cover mix-blend-overlay opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="T-Shirt">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg uppercase italic">Core Tech Tee</h3>
+                            <p class="text-gray-400 text-sm">Training Gear</p>
+                        </div>
+                        <span class="text-neon-lime font-display font-bold text-2xl">$45</span>
+                    </div>
+                    <button class="w-full mt-4 bg-white text-black font-bold uppercase italic py-2 hover:bg-neon-lime transition-colors">Add to Cart</button>
+                </div>
+                 <!-- Product 3 -->
+                 <div class="bg-dark-metal p-4 group">
+                    <div class="relative h-80 mb-4 bg-gray-800 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1740&q=80" class="w-full h-full object-cover mix-blend-overlay opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Red Shoe">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg uppercase italic">Ignite Red</h3>
+                            <p class="text-gray-400 text-sm">Performance</p>
+                        </div>
+                        <span class="text-neon-lime font-display font-bold text-2xl">$150</span>
+                    </div>
+                    <button class="w-full mt-4 bg-white text-black font-bold uppercase italic py-2 hover:bg-neon-lime transition-colors">Add to Cart</button>
+                </div>
+                 <!-- Product 4 -->
+                 <div class="bg-dark-metal p-4 group">
+                    <div class="relative h-80 mb-4 bg-gray-800 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1515586838455-8f8f940d6853?ixlib=rb-4.0.3&auto=format&fit=crop&w=684&q=80" class="w-full h-full object-cover mix-blend-overlay opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" alt="Leggings">
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-lg uppercase italic">Flex Leggings</h3>
+                            <p class="text-gray-400 text-sm">Women's Training</p>
+                        </div>
+                        <span class="text-neon-lime font-display font-bold text-2xl">$60</span>
+                    </div>
+                    <button class="w-full mt-4 bg-white text-black font-bold uppercase italic py-2 hover:bg-neon-lime transition-colors">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-gray-800 pb-12">
+                <div class="md:col-span-2">
+                    <a href="#" class="text-5xl font-display font-bold italic tracking-tighter text-white">PULSE.</a>
+                    <p class="mt-6 text-gray-500 max-w-sm">We build gear for those who refuse to settle. Join the movement and redefine your limits.</p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:bg-neon-lime hover:text-black hover:border-neon-lime transition-colors">IG</a>
+                        <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:bg-neon-lime hover:text-black hover:border-neon-lime transition-colors">TW</a>
+                        <a href="#" class="w-10 h-10 border border-gray-700 flex items-center justify-center hover:bg-neon-lime hover:text-black hover:border-neon-lime transition-colors">YT</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-wider mb-6 text-neon-lime">Shop</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Men's Collection</a></li>
+                        <li><a href="#" class="hover:text-white">Women's Collection</a></li>
+                        <li><a href="#" class="hover:text-white">Accessories</a></li>
+                        <li><a href="#" class="hover:text-white">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase tracking-wider mb-6 text-neon-lime">Support</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Order Status</a></li>
+                        <li><a href="#" class="hover:text-white">Returns</a></li>
+                        <li><a href="#" class="hover:text-white">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-gray-600 text-sm">
+                &copy; 2023 Pulse Activewear. Built with Tailwind CSS.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
