@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Shopify Template - 20 Sections</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a1a1a',
+                        secondary: '#f4f4f5',
+                        accent: '#3b82f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased">
+
+    <!-- 1. Announcement Bar -->
+    <div class="bg-primary text-white text-xs py-2 text-center tracking-wider uppercase font-medium">
+        Free Shipping on all orders over $150 — Worldwide
+    </div>
+
+    <!-- 2. Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
+
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-serif font-bold tracking-tighter">LUXE.</a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex space-x-8 text-sm font-medium uppercase tracking-wide text-gray-600">
+                <a href="#" class="hover:text-primary transition">Shop</a>
+                <a href="#" class="hover:text-primary transition">Collections</a>
+                <a href="#" class="hover:text-primary transition">About</a>
+                <a href="#" class="hover:text-primary transition">Journal</a>
+            </nav>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-6 text-lg text-gray-700">
+                <button class="hover:text-primary"><i class="fas fa-search"></i></button>
+                <button class="hover:text-primary"><i class="far fa-user"></i></button>
+                <button class="hover:text-primary relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-1 -right-2 bg-accent text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Hero Section -->
+    <section class="relative h-[80vh] flex items-center justify-center bg-gray-100 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Hero" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-center text-white px-6">
+            <h2 class="text-sm md:text-base font-medium tracking-[0.2em] mb-4 uppercase">New Collection 2024</h2>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight">Elevate Your <br>Everyday Style</h1>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#" class="bg-white text-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-gray-200 transition">Shop Women</a>
+                <a href="#" class="border border-white text-white px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">Shop Men</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Logo Cloud / Trusted By -->
+    <section class="py-12 border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-xs text-gray-400 uppercase tracking-widest mb-8">Featured In</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <i class="fab fa-vogue text-3xl"></i>
+                <i class="fab fa-google text-3xl"></i>
+                <i class="fab fa-spotify text-3xl"></i>
+                <i class="fab fa-apple text-3xl"></i>
+                <i class="fab fa-amazon text-3xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Featured Collection (Grid) -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-serif font-bold mb-2">New Arrivals</h2>
+                    <p class="text-gray-500">Fresh finds for the season.</p>
+                </div>
+                <a href="#" class="hidden md:block text-sm font-bold underline decoration-1 underline-offset-4">View All</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="group">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Product">
+                        <span class="absolute top-4 left-4 bg-white text-xs px-2 py-1 font-bold uppercase tracking-wider">New</span>
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <h3 class="font-medium text-lg">Urban Sneaker</h3>
+                    <p class="text-gray-500 text-sm mb-2">Footwear</p>
+                    <span class="font-bold">$129.00</span>
+                </div>
+                 <!-- Product 2 -->
+                 <div class="group">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Product">
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <h3 class="font-medium text-lg">Classic Trench</h3>
+                    <p class="text-gray-500 text-sm mb-2">Outerwear</p>
+                    <span class="font-bold">$249.00</span>
+                </div>
+                 <!-- Product 3 -->
+                 <div class="group">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Product">
+                        <span class="absolute top-4 left-4 bg-red-500 text-white text-xs px-2 py-1 font-bold uppercase tracking-wider">Sale</span>
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <h3 class="font-medium text-lg">Linen Shirt</h3>
+                    <p class="text-gray-500 text-sm mb-2">Tops</p>
+                    <div class="flex gap-2">
+                        <span class="font-bold text-red-500">$59.00</span>
+                        <span class="text-gray-400 line-through">$89.00</span>
+                    </div>
+                </div>
+                 <!-- Product 4 -->
+                 <div class="group">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="https://images.unsplash.com/photo-1589363348661-d3039a75f954?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Product">
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <h3 class="font-medium text-lg">Leather Tote</h3>
+                    <p class="text-gray-500 text-sm mb-2">Accessories</p>
+                    <span class="font-bold">$189.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Split Feature -->
+    <section class="grid grid-cols-1 md:grid-cols-2">
+        <div class="h-96 md:h-auto relative">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Feature">
+        </div>
+        <div class="bg-primary text-white p-12 md:p-24 flex flex-col justify-center items-start">
+            <span class="text-accent text-sm font-bold uppercase tracking-widest mb-4">Limited Edition</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">The Midnight Collection</h2>
+            <p class="text-gray-400 mb-8 leading-relaxed max-w-md">Discover the allure of dark tones and premium textures. Crafted for those who own the night.</p>
+            <a href="#" class="text-white border-b border-white pb-1 font-bold tracking-widest uppercase text-sm hover:text-accent hover:border-accent transition">Explore The Edit</a>
+        </div>
+    </section>
+
+    <!-- 7. Marquee -->
+    <section class="bg-accent py-4 text-white overflow-hidden">
+        <div class="marquee-container">
+            <div class="marquee-content font-bold uppercase tracking-widest text-lg">
+                New Styles Added &nbsp; • &nbsp; Free Returns within 30 Days &nbsp; • &nbsp; Sustainable Materials &nbsp; • &nbsp; New Styles Added &nbsp; • &nbsp; Free Returns within 30 Days &nbsp; • &nbsp; Sustainable Materials &nbsp; • &nbsp;
+                New Styles Added &nbsp; • &nbsp; Free Returns within 30 Days &nbsp; • &nbsp; Sustainable Materials &nbsp; • &nbsp; New Styles Added &nbsp; • &nbsp; Free Returns within 30 Days &nbsp; • &nbsp; Sustainable Materials &nbsp; • &nbsp;
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Categories Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">Shop by Category</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <a href="#" class="group text-center">
+                    <div class="w-full aspect-square rounded-full overflow-hidden mb-4 border-2 border-transparent group-hover:border-primary transition">
+                        <img src="https://images.unsplash.com/photo-1551488852-080175d9c222?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Cat">
+                    </div>
+                    <h3 class="font-medium">Dresses</h3>
+                </a>
+                <a href="#" class="group text-center">
+                    <div class="w-full aspect-square rounded-full overflow-hidden mb-4 border-2 border-transparent group-hover:border-primary transition">
+                        <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Cat">
+                    </div>
+                    <h3 class="font-medium">Denim</h3>
+                </a>
+                <a href="#" class="group text-center">
+                    <div class="w-full aspect-square rounded-full overflow-hidden mb-4 border-2 border-transparent group-hover:border-primary transition">
+                        <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Cat">
+                    </div>
+                    <h3 class="font-medium">Shoes</h3>
+                </a>
+                <a href="#" class="group text-center">
+                    <div class="w-full aspect-square rounded-full overflow-hidden mb-4 border-2 border-transparent group-hover:border-primary transition">
+                        <img src="https://images.unsplash.com/photo-1627225924765-552d49cf474d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Cat">
+                    </div>
+                    <h3 class="font-medium">Accessories</h3>
+                </a>
+                <a href="#" class="group text-center">
+                    <div class="w-full aspect-square rounded-full overflow-hidden mb-4 border-2 border-transparent group-hover:border-primary transition">
+                        <img src="https://images.unsplash.com/photo-1576185055363-ebd66381cb63?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Cat">
+                    </div>
+                    <h3 class="font-medium">Bags</h3>
+                </a>
+                <a href="#" class="group text-center">
+                    <div class="w-full aspect-square rounded-full overflow-hidden mb-4 border-2 border-transparent group-hover:border-primary transition">
+                        <img src="https://images.unsplash.com/photo-1596485290094-8bf43798552c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="Cat">
+                    </div>
+                    <h3 class="font-medium">Activewear</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Product Spotlight -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <div class="relative bg-gray-100 p-8 rounded-2xl">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Spotlight Product" class="w-full mix-blend-multiply">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 space-y-6">
+                    <span class="text-accent font-bold tracking-widest uppercase text-xs">Product of the Week</span>
+                    <h2 class="text-4xl font-serif font-bold">Premium Wireless Headphones</h2>
+                    <p class="text-gray-600 leading-relaxed">Experience sound like never before with our noise-cancelling technology and 40-hour battery life. Designed for comfort, engineered for performance.</p>
+                    <div class="flex items-center gap-4">
+                        <span class="text-3xl font-bold">$299</span>
+                        <div class="flex text-yellow-400 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span class="text-gray-400 ml-2">(128 reviews)</span>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white px-8 py-4 uppercase font-bold tracking-widest hover:bg-gray-800 transition w-full md:w-auto">Add to Cart</button>
+                    <div class="pt-6 border-t border-gray-100 grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-truck text-accent"></i> Free Shipping</div>
+                        <div class="flex items-center gap-2 text-sm text-gray-600"><i class="fas fa-shield-alt text-accent"></i> 2 Year Warranty</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. USP / Features -->
+    <section class="py-12 border-y border-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto text-primary text-xl">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h4 class="font-bold">Free Shipping</h4>
+                    <p class="text-sm text-gray-500">On all orders over $150</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto text-primary text-xl">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h4 class="font-bold">Easy Returns</h4>
+                    <p class="text-sm text-gray-500">30-day money back guarantee</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto text-primary text-xl">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h4 class="font-bold">Secure Payment</h4>
+                    <p class="text-sm text-gray-500">Encrypted payment gateway</p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto text-primary text-xl">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4 class="font-bold">24/7 Support</h4>
+                    <p class="text-sm text-gray-500">Dedicated support team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Deal of the Day -->
+    <section class="py-20 bg-primary text-white text-center">
+        <div class="container mx-auto px-6">
+            <span class="text-accent uppercase tracking-widest font-bold text-sm">Don't Miss Out</span>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mt-4 mb-8">Deal of the Day</h2>
+            <div class="flex justify-center gap-8 mb-10">
+                <div class="text-center"><div class="text-4xl font-bold font-mono">08</div><div class="text-xs uppercase text-gray-400 mt-1">Hours</div></div>
+                <div class="text-center"><div class="text-4xl font-bold font-mono">45</div><div class="text-xs uppercase text-gray-400 mt-1">Minutes</div></div>
+                <div class="text-center"><div class="text-4xl font-bold font-mono">12</div><div class="text-xs uppercase text-gray-400 mt-1">Seconds</div></div>
+            </div>
+            <p class="mb-8 text-gray-300">Get 50% off the Summer Collection. Offer ends soon.</p>
+            <a href="#" class="inline-block bg-white text-primary px-10 py-4 font-bold uppercase tracking-widest hover:bg-accent hover:text-white transition">Shop The Deal</a>
+        </div>
+    </section>
+
+    <!-- 12. Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center mb-16">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 shadow-sm rounded-xl">
+                    <div class="text-accent mb-4"><i class="fas fa-quote-left text-2xl"></i></div>
+                    <p class="text-gray-600 mb-6 italic">"The quality of the fabrics is outstanding. I've washed my shirt multiple times and it still looks brand new."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full" alt="User">
+                        <div>
+                            <h5 class="font-bold text-sm">Sarah Jenkins</h5>
+                            <p class="text-xs text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 shadow-sm rounded-xl">
+                    <div class="text-accent mb-4"><i class="fas fa-quote-left text-2xl"></i></div>
+                    <p class="text-gray-600 mb-6 italic">"Super fast shipping and the packaging was beautiful. It felt like receiving a gift. Highly recommended!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full" alt="User">
+                        <div>
+                            <h5 class="font-bold text-sm">Michael Ross</h5>
+                            <p class="text-xs text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 shadow-sm rounded-xl">
+                    <div class="text-accent mb-4"><i class="fas fa-quote-left text-2xl"></i></div>
+                    <p class="text-gray-600 mb-6 italic">"Excellent customer service. They helped me find the perfect size and the fit is spot on. Will buy again."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full" alt="User">
+                        <div>
+                            <h5 class="font-bold text-sm">Emma Wilson</h5>
+                            <p class="text-xs text-gray-400">Verified Buyer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Featured Collection 2 (Slider/Scroll) -->
+    <section class="py-20 overflow-hidden">
+        <div class="container mx-auto px-6 mb-8 flex justify-between items-end">
+            <h2 class="text-3xl font-serif font-bold">Best Sellers</h2>
+            <div class="flex gap-2">
+                <button class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fas fa-arrow-left"></i></button>
+                <button class="w-10 h-10 border border-gray-300 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="flex gap-6 overflow-x-auto hide-scrollbar px-6 md:px-[calc((100vw-1200px)/2)] pb-10">
+            <!-- Item 1 -->
+            <div class="min-w-[280px] w-[280px]">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-[350px] object-cover mb-4 rounded-lg" alt="Product">
+                <h3 class="font-bold">Retro Shades</h3>
+                <p class="text-gray-500">$45.00</p>
+            </div>
+             <!-- Item 2 -->
+             <div class="min-w-[280px] w-[280px]">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-[350px] object-cover mb-4 rounded-lg" alt="Product">
+                <h3 class="font-bold">Blue Heels</h3>
+                <p class="text-gray-500">$89.00</p>
+            </div>
+             <!-- Item 3 -->
+             <div class="min-w-[280px] w-[280px]">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-[350px] object-cover mb-4 rounded-lg" alt="Product">
+                <h3 class="font-bold">Leather Bag</h3>
+                <p class="text-gray-500">$120.00</p>
+            </div>
+             <!-- Item 4 -->
+             <div class="min-w-[280px] w-[280px]">
+                <img src="https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-[350px] object-cover mb-4 rounded-lg" alt="Product">
+                <h3 class="font-bold">Silk Scarf</h3>
+                <p class="text-gray-500">$35.00</p>
+            </div>
+             <!-- Item 5 -->
+             <div class="min-w-[280px] w-[280px]">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" class="w-full h-[350px] object-cover mb-4 rounded-lg" alt="Product">
+                <h3 class="font-bold">White Tee</h3>
+                <p class="text-gray-500">$25.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Lookbook / Masonry -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold text-center mb-12">Summer Lookbook</h2>
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full rounded-lg" alt="Look">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <span class="uppercase tracking-widest font-bold">Shop The Look</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full rounded-lg" alt="Look">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <span class="uppercase tracking-widest font-bold">Shop The Look</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1550614000-4b9519e092a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full rounded-lg" alt="Look">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <span class="uppercase tracking-widest font-bold">Shop The Look</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full rounded-lg" alt="Look">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <span class="uppercase tracking-widest font-bold">Shop The Look</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full rounded-lg" alt="Look">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <span class="uppercase tracking-widest font-bold">Shop The Look</span>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full rounded-lg" alt="Look">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                        <span class="uppercase tracking-widest font-bold">Shop The Look</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. About Snippet / Team -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="rounded-xl shadow-lg" alt="Team">
+            </div>
+            <div class="w-full md:w-1/2 space-y-6">
+                <span class="text-accent font-bold uppercase tracking-widest text-sm">Our Story</span>
+                <h2 class="text-3xl font-serif font-bold">Crafted with Passion. <br>Defined by Quality.</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Founded in 2010, LUXE started with a simple mission: to create timeless pieces that last a lifetime.
+                    We believe in ethical manufacturing, sustainable sourcing, and transparent pricing.
+                    Our team is a diverse group of dreamers and doers, united by a love for great design.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div>
+                        <h4 class="text-3xl font-bold text-primary">10+</h4>
+                        <p class="text-sm text-gray-500 uppercase">Years of Service</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold text-primary">50k+</h4>
+                        <p class="text-sm text-gray-500 uppercase">Happy Customers</p>
+                    </div>
+                </div>
+                <a href="#" class="inline-block border-b-2 border-primary pb-1 font-bold hover:text-accent hover:border-accent transition mt-4">Read Our Full Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. FAQ Accordion -->
+    <section class="py-20">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-serif font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <details class="group border border-gray-200 rounded-lg bg-white overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none group-open:bg-gray-50 transition">
+                        <span>How long does shipping take?</span>
+                        <i class="fas fa-plus group-open:hidden text-gray-400"></i>
+                        <i class="fas fa-minus hidden group-open:block text-gray-400"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-600 leading-relaxed group-open:bg-gray-50">
+                        Standard shipping takes 5-7 business days. Express shipping is available and takes 2-3 business days. International orders may take up to 14 days.
+                    </div>
+                </details>
+                <details class="group border border-gray-200 rounded-lg bg-white overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none group-open:bg-gray-50 transition">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-plus group-open:hidden text-gray-400"></i>
+                        <i class="fas fa-minus hidden group-open:block text-gray-400"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-600 leading-relaxed group-open:bg-gray-50">
+                        We accept returns within 30 days of delivery. Items must be unworn, unwashed, and with original tags. Return shipping is free for all orders.
+                    </div>
+                </details>
+                <details class="group border border-gray-200 rounded-lg bg-white overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none group-open:bg-gray-50 transition">
+                        <span>Do you ship internationally?</span>
+                        <i class="fas fa-plus group-open:hidden text-gray-400"></i>
+                        <i class="fas fa-minus hidden group-open:block text-gray-400"></i>
+                    </summary>
+                    <div class="p-6 pt-0 text-gray-600 leading-relaxed group-open:bg-gray-50">
+                        Yes, we ship to over 50 countries worldwide. International shipping costs are calculated at checkout based on destination and weight.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 17. Blog / Journal -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-serif font-bold mb-12 text-center">From The Journal</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog 1 -->
+                <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Blog">
+                    <div class="p-6">
+                        <span class="text-xs text-accent font-bold uppercase">Fashion</span>
+                        <h3 class="font-bold text-xl mt-2 mb-3">Top Trends for Fall 2024</h3>
+                        <p class="text-gray-500 text-sm mb-4">Discover the key pieces you need to update your wardrobe this coming season...</p>
+                        <a href="#" class="text-sm font-bold underline decoration-accent decoration-2 underline-offset-4">Read More</a>
+                    </div>
+                </article>
+                 <!-- Blog 2 -->
+                 <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="https://images.unsplash.com/photo-1556906781-9a412961d289?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Blog">
+                    <div class="p-6">
+                        <span class="text-xs text-accent font-bold uppercase">Lifestyle</span>
+                        <h3 class="font-bold text-xl mt-2 mb-3">Sustainable Living Guide</h3>
+                        <p class="text-gray-500 text-sm mb-4">Small changes you can make in your daily routine to reduce your fashion footprint...</p>
+                        <a href="#" class="text-sm font-bold underline decoration-accent decoration-2 underline-offset-4">Read More</a>
+                    </div>
+                </article>
+                 <!-- Blog 3 -->
+                 <article class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-48 object-cover" alt="Blog">
+                    <div class="p-6">
+                        <span class="text-xs text-accent font-bold uppercase">Behind the Scenes</span>
+                        <h3 class="font-bold text-xl mt-2 mb-3">Meet the Designer</h3>
+                        <p class="text-gray-500 text-sm mb-4">An exclusive interview with our lead designer about the inspiration behind the new collection...</p>
+                        <a href="#" class="text-sm font-bold underline decoration-accent decoration-2 underline-offset-4">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 18. Instagram / Social Feed -->
+    <section class="py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-serif font-bold mb-2">@LUXE_OFFICIAL</h2>
+            <p class="text-gray-500 mb-8">Follow us on Instagram for daily inspiration.</p>
+            <div class="grid grid-cols-2 md:grid-cols-6 gap-2">
+                <img src="https://images.unsplash.com/photo-1485230946075-1eb196f83f23?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-square object-cover hover:opacity-80 transition cursor-pointer" alt="Insta">
+                <img src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-square object-cover hover:opacity-80 transition cursor-pointer" alt="Insta">
+                <img src="https://images.unsplash.com/photo-1503342394128-c104d54dba01?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-square object-cover hover:opacity-80 transition cursor-pointer" alt="Insta">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-square object-cover hover:opacity-80 transition cursor-pointer" alt="Insta">
+                <img src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-square object-cover hover:opacity-80 transition cursor-pointer" alt="Insta">
+                <img src="https://images.unsplash.com/photo-1506152983158-b4a74a01c721?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full aspect-square object-cover hover:opacity-80 transition cursor-pointer" alt="Insta">
+            </div>
+        </div>
+    </section>
+
+    <!-- 19. Newsletter -->
+    <section class="py-24 bg-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center max-w-2xl">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Join Our Community</h2>
+            <p class="text-gray-400 mb-8">Subscribe to our newsletter to receive exclusive offers, latest news, and a 10% discount on your first order.</p>
+            <form class="flex flex-col md:flex-row gap-4">
+                <input type="email" placeholder="Enter your email address" class="flex-1 bg-white/10 border border-white/20 text-white placeholder-gray-400 px-6 py-4 outline-none focus:border-accent transition rounded-lg md:rounded-r-none">
+                <button type="submit" class="bg-accent text-white px-8 py-4 font-bold uppercase tracking-widest hover:bg-blue-600 transition rounded-lg md:rounded-l-none">Subscribe</button>
+            </form>
+            <p class="text-xs text-gray-500 mt-4">By subscribing you agree to our Terms & Conditions and Privacy Policy.</p>
+        </div>
+    </section>
+
+    <!-- 20. Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <a href="#" class="text-2xl font-serif font-bold text-white tracking-tighter block mb-6">LUXE.</a>
+                    <p class="text-gray-500 mb-6">Redefining modern luxury through sustainable design and exceptional craftsmanship.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-6">Shop</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-accent transition">New Arrivals</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Best Sellers</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Women</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Men</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Accessories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-6">Help</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-accent transition">Track Order</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Returns & Exchanges</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Size Guide</a></li>
+                        <li><a href="#" class="hover:text-accent transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-gray-500"></i> 123 Fashion Ave, <br>New York, NY 10001</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-phone mt-1 text-gray-500"></i> +1 (555) 123-4567</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-envelope mt-1 text-gray-500"></i> hello@luxe.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-500">© 2024 LUXE Inc. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <i class="fab fa-cc-visa text-2xl text-gray-500"></i>
+                    <i class="fab fa-cc-mastercard text-2xl text-gray-500"></i>
+                    <i class="fab fa-cc-amex text-2xl text-gray-500"></i>
+                    <i class="fab fa-cc-paypal text-2xl text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
