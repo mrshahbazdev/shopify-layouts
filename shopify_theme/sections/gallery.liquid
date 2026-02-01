@@ -1,0 +1,63 @@
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-serif font-bold text-center mb-12">{{ section.settings.title }}</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {% for block in section.blocks %}
+        <div class="relative group overflow-hidden aspect-square">
+          {% if block.settings.image != blank %}
+            <img src="{{ block.settings.image | image_url: width: 800 }}" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Gallery Image">
+          {% else %}
+             {{ 'image' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-200 transition duration-700 group-hover:scale-110' }}
+          {% endif %}
+
+          <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+            <i class="fab fa-instagram text-white text-3xl"></i>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image Gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Follow Us"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Gallery",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}

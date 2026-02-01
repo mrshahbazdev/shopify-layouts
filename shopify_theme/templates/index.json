@@ -3,7 +3,8 @@
     "announcement_bar": {
       "type": "announcement-bar",
       "settings": {
-        "text": "Free Shipping on all orders over $150 — Worldwide"
+        "text": "Free Shipping on all orders over $150 — Worldwide",
+        "show_language_selector": true
       }
     },
     "header": {
@@ -17,6 +18,12 @@
       "settings": {
         "heading": "Elevate Your \nEveryday Style",
         "subheading": "New Collection 2024"
+      }
+    },
+    "video_bg": {
+      "type": "video-background",
+      "settings": {
+        "heading": "Experience Motion"
       }
     },
     "logo_cloud": {
@@ -48,6 +55,14 @@
         "text": "New Styles Added"
       }
     },
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_1": { "type": "slide", "settings": { "heading": "Summer Vibes" } },
+        "slide_2": { "type": "slide", "settings": { "heading": "Winter Warmth" } }
+      },
+      "block_order": ["slide_1", "slide_2"]
+    },
     "categories": {
       "type": "categories",
       "blocks": {
@@ -59,6 +74,14 @@
         "cat_6": { "type": "category", "settings": { "title": "Activewear" } }
       },
       "block_order": ["cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6"]
+    },
+    "collection_tabs": {
+      "type": "collection-tabs",
+      "blocks": {
+        "tab_1": { "type": "collection", "settings": { "title": "Best Sellers" } },
+        "tab_2": { "type": "collection", "settings": { "title": "New In" } }
+      },
+      "block_order": ["tab_1", "tab_2"]
     },
     "product_spotlight": {
       "type": "product-spotlight",
@@ -75,10 +98,18 @@
       },
       "block_order": ["feat_1", "feat_2", "feat_3", "feat_4"]
     },
+    "rich_text": {
+        "type": "rich-text",
+        "settings": {}
+    },
     "deal_of_day": {
       "type": "deal-of-day",
       "settings": {
       }
+    },
+    "image_with_text": {
+        "type": "image-with-text",
+        "settings": { "layout": "right" }
     },
     "testimonials": {
       "type": "testimonials",
@@ -89,10 +120,28 @@
       },
       "block_order": ["test_1", "test_2", "test_3"]
     },
+    "timeline": {
+        "type": "timeline",
+        "blocks": {
+            "m_1": { "type": "milestone", "settings": { "year": "2015", "title": "Launch" } },
+            "m_2": { "type": "milestone", "settings": { "year": "2018", "title": "Expansion" } },
+            "m_3": { "type": "milestone", "settings": { "year": "2024", "title": "Global" } }
+        },
+        "block_order": ["m_1", "m_2", "m_3"]
+    },
     "best_sellers": {
       "type": "best-sellers",
       "settings": {
       }
+    },
+    "pricing_table": {
+        "type": "pricing-table",
+        "blocks": {
+            "p_1": { "type": "plan", "settings": { "title": "Basic" } },
+            "p_2": { "type": "plan", "settings": { "title": "Pro", "featured": true, "price": "$29" } },
+            "p_3": { "type": "plan", "settings": { "title": "Enterprise", "price": "$99" } }
+        },
+        "block_order": ["p_1", "p_2", "p_3"]
     },
     "lookbook": {
       "type": "lookbook",
@@ -111,6 +160,10 @@
       "settings": {
       }
     },
+    "contact_form": {
+        "type": "contact-form",
+        "settings": {}
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -120,10 +173,24 @@
       },
       "block_order": ["faq_1", "faq_2", "faq_3"]
     },
+    "map": {
+        "type": "map",
+        "settings": {}
+    },
     "blog_posts": {
       "type": "blog-posts",
       "settings": {
       }
+    },
+    "gallery": {
+        "type": "gallery",
+        "blocks": {
+            "g_1": { "type": "image" },
+            "g_2": { "type": "image" },
+            "g_3": { "type": "image" },
+            "g_4": { "type": "image" }
+        },
+        "block_order": ["g_1", "g_2", "g_3", "g_4"]
     },
     "social_feed": {
       "type": "social-feed",
@@ -154,20 +221,30 @@
   "order": [
     "announcement_bar",
     "header",
+    "video_bg",
     "hero",
     "logo_cloud",
     "featured_collection",
+    "slideshow",
     "split_feature",
+    "rich_text",
     "marquee",
     "categories",
+    "collection_tabs",
     "product_spotlight",
+    "image_with_text",
     "features_grid",
     "deal_of_day",
+    "timeline",
     "testimonials",
+    "pricing_table",
     "best_sellers",
     "lookbook",
     "team",
+    "gallery",
+    "contact_form",
     "faq",
+    "map",
     "blog_posts",
     "social_feed",
     "newsletter",

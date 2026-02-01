@@ -1,0 +1,80 @@
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <h2 class="text-3xl font-serif font-bold text-center mb-16">{{ section.settings.title }}</h2>
+
+    <div class="relative">
+      <!-- Vertical Line -->
+      <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200 hidden md:block"></div>
+
+      <div class="space-y-12">
+        {% for block in section.blocks %}
+          <div class="flex flex-col md:flex-row items-center justify-between relative group">
+
+            <!-- Dot -->
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow hidden md:block group-hover:bg-accent transition"></div>
+
+            <!-- Content Left (Even) or Right (Odd) -->
+            <div class="w-full md:w-5/12 {% cycle 'md:text-right md:order-1', 'md:text-left md:order-3' %} mb-6 md:mb-0">
+               <span class="text-accent font-bold text-xl block mb-2">{{ block.settings.year }}</span>
+               <h3 class="text-xl font-bold mb-2">{{ block.settings.title }}</h3>
+               <p class="text-gray-500 text-sm leading-relaxed">{{ block.settings.text }}</p>
+            </div>
+
+            <!-- Spacer for opposite side -->
+            <div class="hidden md:block w-5/12 order-2"></div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Timeline",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our Journey"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "milestone",
+      "name": "Milestone",
+      "settings": [
+        {
+          "type": "text",
+          "id": "year",
+          "label": "Year / Step",
+          "default": "2010"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "The Beginning"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Started in a small garage with a passion for design."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Timeline",
+      "blocks": [
+        { "type": "milestone" },
+        { "type": "milestone" },
+        { "type": "milestone" }
+      ]
+    }
+  ]
+}
+{% endschema %}

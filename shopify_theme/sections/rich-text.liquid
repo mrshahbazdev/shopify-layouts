@@ -1,0 +1,54 @@
+<section class="py-24 bg-white text-center">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <span class="text-accent text-sm font-bold uppercase tracking-widest mb-4 block">{{ section.settings.eyebrow }}</span>
+    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-8">{{ section.settings.title }}</h2>
+    <div class="text-gray-600 leading-relaxed text-lg mb-8">
+      {{ section.settings.text }}
+    </div>
+    {% if section.settings.link != blank %}
+      <a href="{{ section.settings.link }}" class="text-primary border-b-2 border-primary pb-1 font-bold hover:text-accent hover:border-accent transition">{{ section.settings.link_text }}</a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rich Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow Text",
+      "default": "Our Philosophy"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Designed for longevity."
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "We believe in creating pieces that stand the test of time, both in style and quality. Every detail is considered, every fabric chosen with care."
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich Text"
+    }
+  ]
+}
+{% endschema %}

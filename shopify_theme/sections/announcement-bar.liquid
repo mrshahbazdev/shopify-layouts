@@ -1,5 +1,40 @@
-<div class="bg-primary text-white text-xs py-2 text-center tracking-wider uppercase font-medium">
-  {{ section.settings.text }}
+<div class="bg-primary text-white text-xs py-2 tracking-wider uppercase font-medium">
+  <div class="container mx-auto px-6 flex justify-between items-center">
+    <!-- Empty div for balance or social icons if needed -->
+    <div class="hidden md:block w-1/3"></div>
+
+    <!-- Announcement Text -->
+    <div class="w-full md:w-1/3 text-center">
+      {{ section.settings.text }}
+    </div>
+
+    <!-- Language Selector -->
+    <div class="hidden md:flex w-1/3 justify-end relative z-50">
+      {% form 'localization', id: 'localization_form_tag', class: 'relative' %}
+        <div class="relative inline-block text-left group">
+          <button type="button" class="inline-flex justify-center w-full px-2 py-1 text-white hover:text-gray-300 focus:outline-none">
+            {{ localization.language.iso_code | upcase }}
+            <i class="fas fa-chevron-down ml-1 text-[10px] mt-1"></i>
+          </button>
+
+          <div class="absolute right-0 mt-2 w-24 bg-white text-black rounded shadow-lg hidden group-hover:block">
+            <ul class="py-1">
+              {% for language in localization.available_languages %}
+                <li>
+                  <a href="#"
+                     class="block px-4 py-2 text-xs hover:bg-gray-100"
+                     onclick="this.closest('form').querySelector('input[name=\'language_code\']').value='{{ language.iso_code }}'; this.closest('form').submit(); return false;">
+                    {{ language.endonym_name | capitalize }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+          <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
+        </div>
+      {% endform %}
+    </div>
+  </div>
 </div>
 
 {% schema %}
@@ -11,6 +46,12 @@
       "id": "text",
       "label": "Announcement Text",
       "default": "Free Shipping on all orders over $150 — Worldwide"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_language_selector",
+      "label": "Show Language Selector",
+      "default": true
     }
   ]
 }

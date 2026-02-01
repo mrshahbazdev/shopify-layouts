@@ -1,0 +1,87 @@
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-col {% if section.settings.layout == 'right' %}md:flex-row-reverse{% else %}md:flex-row{% endif %} items-center gap-12 md:gap-20">
+
+      <!-- Image -->
+      <div class="w-full md:w-1/2">
+        <div class="relative overflow-hidden rounded-lg shadow-lg">
+           {% if section.settings.image != blank %}
+                <img src="{{ section.settings.image | image_url: width: 1000 }}" class="w-full h-full object-cover hover:scale-105 transition duration-700" alt="{{ section.settings.title }}">
+           {% else %}
+                {{ 'image' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-200' }}
+           {% endif %}
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="w-full md:w-1/2">
+        <span class="text-accent font-bold uppercase tracking-widest text-xs mb-4 block">{{ section.settings.eyebrow }}</span>
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 leading-tight">{{ section.settings.title }}</h2>
+        <div class="text-gray-600 leading-relaxed mb-8 space-y-4">
+          {{ section.settings.text }}
+        </div>
+        {% if section.settings.link != blank %}
+          <a href="{{ section.settings.link }}" class="inline-block bg-primary text-white px-8 py-3 font-bold uppercase tracking-widest hover:bg-accent transition">{{ section.settings.btn_text }}</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Image with Text",
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Image Position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "About Us"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "The Art of Simplicity"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>We focus on the essentials. No clutter, just pure design and exceptional materials. Our process is rooted in tradition but driven by innovation.</p>"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Discover More"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Text"
+    }
+  ]
+}
+{% endschema %}
