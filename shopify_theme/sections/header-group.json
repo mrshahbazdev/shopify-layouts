@@ -1,0 +1,24 @@
+{
+  "name": "Header",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_text": "LUXE.",
+        "menu": "main-menu"
+      }
+    },
+    "announcement_bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "text": "Free Shipping on all orders over $150 — Worldwide",
+        "show_language_selector": true
+      }
+    }
+  },
+  "order": [
+    "announcement_bar",
+    "header"
+  ]
+}

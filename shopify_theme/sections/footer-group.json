@@ -1,0 +1,19 @@
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "logo_text": "LUXE.",
+        "description": "Redefining modern luxury through sustainable design and exceptional craftsmanship.",
+        "address": "123 Fashion Ave, New York, NY 10001",
+        "phone": "+1 (555) 123-4567",
+        "email": "hello@luxe.com"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

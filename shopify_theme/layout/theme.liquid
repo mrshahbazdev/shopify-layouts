@@ -22,6 +22,9 @@
 
     {{ 'tailwind.css' | asset_url | stylesheet_tag }}
     {{ 'fontawesome.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <style>
         /* Google Fonts Import */
@@ -77,8 +80,12 @@
       Skip to content
     </a>
 
-    <main id="MainContent" role="main" tabindex="-1">
+    {% sections 'header-group' %}
+
+    <main id="MainContent" role="main" tabindex="-1" class="min-h-screen">
       {{ content_for_layout }}
     </main>
+
+    {% sections 'footer-group' %}
   </body>
 </html>

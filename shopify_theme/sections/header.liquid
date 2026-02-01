@@ -1,7 +1,7 @@
-<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
     <div class="container mx-auto px-6 h-20 flex items-center justify-between">
         <!-- Mobile Menu Button -->
-        <button class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
+        <button id="mobile-menu-toggle" class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
 
         <!-- Logo -->
         <a href="{{ routes.root_url }}" class="text-2xl font-serif font-bold tracking-tighter">{{ section.settings.logo_text }}</a>
@@ -20,13 +20,31 @@
 
         <!-- Icons -->
         <div class="flex items-center space-x-6 text-lg text-gray-700">
-            <button class="hover:text-primary"><i class="fas fa-search"></i></button>
-            <button class="hover:text-primary"><i class="far fa-user"></i></button>
-            <button class="hover:text-primary relative">
+            <a href="{{ routes.search_url }}" class="hover:text-primary"><i class="fas fa-search"></i></a>
+            {% if shop.customer_accounts_enabled %}
+                <a href="{{ routes.account_url }}" class="hover:text-primary"><i class="far fa-user"></i></a>
+            {% endif %}
+            <a href="{{ routes.cart_url }}" class="hover:text-primary relative">
                 <i class="fas fa-shopping-bag"></i>
-                <span class="absolute -top-1 -right-2 bg-accent text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
-            </button>
+                {% if cart.item_count > 0 %}
+                    <span class="absolute -top-1 -right-2 bg-accent text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">{{ cart.item_count }}</span>
+                {% endif %}
+            </a>
         </div>
+    </div>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-lg lg:hidden">
+        <nav class="flex flex-col p-6 space-y-4 font-medium uppercase text-sm tracking-wide">
+             {% for link in linklists[section.settings.menu].links %}
+              <a href="{{ link.url }}" class="hover:text-primary transition border-b border-gray-50 pb-2">{{ link.title }}</a>
+            {% else %}
+              <a href="#" class="hover:text-primary transition border-b border-gray-50 pb-2">Shop</a>
+              <a href="#" class="hover:text-primary transition border-b border-gray-50 pb-2">Collections</a>
+              <a href="#" class="hover:text-primary transition border-b border-gray-50 pb-2">About</a>
+              <a href="#" class="hover:text-primary transition border-b border-gray-50 pb-2">Journal</a>
+            {% endfor %}
+        </nav>
     </div>
 </header>
 

@@ -4,14 +4,14 @@
     <!-- Product Images -->
     <div class="w-full md:w-1/2">
       {% if product.featured_image %}
-        <div class="mb-4 bg-gray-100 rounded-lg overflow-hidden">
-          <img src="{{ product.featured_image | image_url: width: 1200 }}" class="w-full h-auto object-cover" alt="{{ product.title }}">
+        <div class="mb-4 bg-gray-100 rounded-lg overflow-hidden aspect-square">
+          <img id="main-product-image" src="{{ product.featured_image | image_url: width: 1200 }}" class="w-full h-full object-cover" alt="{{ product.title }}">
         </div>
       {% endif %}
 
       <div class="grid grid-cols-4 gap-4">
-        {% for media in product.media offset: 1 %}
-           <div class="bg-gray-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-75 transition">
+        {% for media in product.media %}
+           <div class="product-thumbnail bg-gray-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-75 transition aspect-square {% if forloop.first %}ring-2 ring-black{% endif %}" data-src="{{ media | image_url: width: 1200 }}">
              <img src="{{ media | image_url: width: 300 }}" class="w-full h-full object-cover" alt="{{ product.title }}">
            </div>
         {% endfor %}
