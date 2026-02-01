@@ -3,150 +3,633 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Shopify Layouts Collection</title>
+    <title>Modern Shopify Layouts - Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="py-12 px-6">
-    <div class="max-w-6xl mx-auto">
-        <header class="text-center mb-16">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Modern Shopify Layouts</h1>
-            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                A collection of distinct, modern e-commerce prototypes built with HTML and Tailwind CSS.
-                Each layout targets a specific niche with unique typography, color palettes, and component structures.
-            </p>
-        </header>
+<body class="bg-gray-50 text-gray-800">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600">ShopifyLayouts.</a>
+            <div class="text-sm text-gray-500">30 Modern Layouts</div>
+        </div>
+    </nav>
 
-            <!-- Card 1 -->
-            <a href="layout_1_minimal.html" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                <div class="h-48 bg-gray-200 relative overflow-hidden">
-                   <div class="absolute inset-0 bg-gray-900 flex items-center justify-center text-white text-opacity-50 text-6xl font-thin group-hover:scale-110 transition duration-700">MUSE</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Minimalist Fashion</h2>
-                    <p class="text-gray-500 mb-4 text-sm">Clean lines, whitespace, and focus on photography. Ideal for high-end clothing brands.</p>
-                    <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded font-medium">Layout 1</span>
+    <header class="bg-indigo-600 text-white py-20 text-center px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Choose Your Theme</h1>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto">A collection of 30 distinct, modern, and responsive Shopify-ready layouts built with Tailwind CSS. Each layout features 10+ unique sections.</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+            <a href="layout_1_minimal.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-gray-100 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Minimalist Store</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Clean, whitespace-heavy design for modern brands.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
                 </div>
             </a>
 
-            <!-- Card 2 -->
-            <a href="layout_2_brutalist.html" class="group block bg-black rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-green-400/20 transition duration-300 transform hover:-translate-y-1">
-                <div class="h-48 bg-gray-800 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-black flex items-center justify-center text-[#ccff00] font-bold text-4xl group-hover:scale-110 transition duration-700">HYPE</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-white mb-2">Bold Brutalist</h2>
-                    <p class="text-gray-400 mb-4 text-sm">High contrast, large typography, and marquee effects. Perfect for streetwear.</p>
-                    <span class="inline-block bg-[#ccff00] text-black text-xs px-2 py-1 rounded font-bold">Layout 2</span>
-                </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a href="layout_3_tech.html" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                <div class="h-48 bg-gray-50 relative overflow-hidden">
-                     <div class="absolute inset-0 flex items-center justify-center text-blue-600 font-bold text-4xl group-hover:scale-110 transition duration-700">Tech</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Clean Tech</h2>
-                    <p class="text-gray-500 mb-4 text-sm">Apple-inspired aesthetic with bento grids and glassmorphism. Great for electronics.</p>
-                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-medium">Layout 3</span>
+            <a href="layout_2_brutalist.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-stone-300 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Brutalist Design</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Bold, raw, and unconventional layout.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
                 </div>
             </a>
 
-            <!-- Card 4 -->
-            <a href="layout_4_beauty.html" class="group block bg-[#fdfbf7] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                <div class="h-48 bg-[#eddcd2] relative overflow-hidden">
-                    <div class="absolute inset-0 flex items-center justify-center text-[#a3b18a] font-serif italic text-4xl group-hover:scale-110 transition duration-700">Glow</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Organic Beauty</h2>
-                    <p class="text-gray-500 mb-4 text-sm">Soft pastel colors, serif fonts, and organic shapes. Best for skincare and wellness.</p>
-                    <span class="inline-block bg-[#a3b18a] text-white text-xs px-2 py-1 rounded font-medium">Layout 4</span>
-                </div>
-            </a>
-
-             <!-- Card 5 -->
-             <a href="layout_5_furniture.html" class="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                <div class="h-48 bg-[#3d3d3d] relative overflow-hidden">
-                    <div class="absolute inset-0 flex items-center justify-center text-white font-serif text-4xl group-hover:scale-110 transition duration-700">Habitat</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2">Modern Living</h2>
-                    <p class="text-gray-500 mb-4 text-sm">Earth tones, masonry grids, and hotspots. Ideal for furniture and home decor.</p>
-                    <span class="inline-block bg-gray-200 text-gray-800 text-xs px-2 py-1 rounded font-medium">Layout 5</span>
+            <a href="layout_3_tech.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-slate-900 text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Tech/Electronics</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Dark mode, sleek, high-tech vibe.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
                 </div>
             </a>
 
-            <!-- Card 6 -->
-            <a href="layout_6_sports.html" class="group block bg-[#111] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-800">
-                <div class="h-48 bg-black relative overflow-hidden">
-                    <div class="absolute inset-0 flex items-center justify-center text-[#ccff00] font-bold italic text-5xl group-hover:scale-110 transition duration-700" style="font-family: 'Teko', sans-serif;">PULSE</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-white mb-2">Sports Active</h2>
-                    <p class="text-gray-400 mb-4 text-sm">Skewed angles, neon accents, and bold italic typography. High energy for fitness brands.</p>
-                    <span class="inline-block bg-[#ccff00] text-black text-xs px-2 py-1 rounded font-bold">Layout 6</span>
-                </div>
-            </a>
-
-             <!-- Card 7 -->
-             <a href="layout_7_luxury.html" class="group block bg-[#1a1a1a] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-800">
-                <div class="h-48 bg-[#0f172a] relative overflow-hidden">
-                    <div class="absolute inset-0 flex items-center justify-center text-[#D4AF37] font-serif text-4xl group-hover:scale-110 transition duration-700 tracking-widest">AURUM</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-[#D4AF37] mb-2">Luxury Jewelry</h2>
-                    <p class="text-gray-400 mb-4 text-sm">Dark elegant backgrounds, gold accents, and serif typography. Premium and sophisticated.</p>
-                    <span class="inline-block border border-[#D4AF37] text-[#D4AF37] text-xs px-2 py-1 rounded font-medium">Layout 7</span>
+            <a href="layout_4_beauty.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-rose-50 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Beauty & Wellness</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Soft, pastel, elegant aesthetics.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
                 </div>
             </a>
 
-            <!-- Card 8 -->
-            <a href="layout_8_kids.html" class="group block bg-[#F7F7F7] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
-                <div class="h-48 bg-[#FFD93D] relative overflow-hidden">
-                    <div class="absolute inset-0 flex items-center justify-center text-[#FF6B6B] font-bold text-5xl group-hover:scale-110 transition duration-700">PLAY</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Kids & Toys</h2>
-                    <p class="text-gray-500 mb-4 text-sm">Vibrant colors, rounded corners, and playful animations. Fun and engaging.</p>
-                    <span class="inline-block bg-[#FF6B6B] text-white text-xs px-2 py-1 rounded-xl font-bold">Layout 8</span>
-                </div>
-            </a>
-
-             <!-- Card 9 -->
-             <a href="layout_9_artisanal.html" class="group block bg-[#FDFBF7] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-200">
-                <div class="h-48 bg-[#E6DCCF] relative overflow-hidden">
-                    <div class="absolute inset-0 flex items-center justify-center text-[#BC5D41] font-serif italic text-4xl group-hover:scale-110 transition duration-700">Crafted</div>
-                </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-[#2C2C2C] mb-2">Artisanal Handmade</h2>
-                    <p class="text-gray-500 mb-4 text-sm">Textured backgrounds, warm earth tones, and hand-drawn elements. Authentic and cozy.</p>
-                    <span class="inline-block bg-[#BC5D41] text-white text-xs px-2 py-1 rounded font-serif">Layout 9</span>
+            <a href="layout_5_furniture.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-orange-50 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Furniture & Home</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Warm, earthy, interior-focused design.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
                 </div>
             </a>
 
-             <!-- Card 10 -->
-             <a href="layout_10_food.html" class="group block bg-[#FDFFFC] rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border border-gray-100">
-                <div class="h-48 bg-[#FF9F1C] relative overflow-hidden">
-                    <div class="absolute inset-0 flex items-center justify-center text-white font-bold text-4xl group-hover:scale-110 transition duration-700">Fresh</div>
+            <a href="layout_6_sports.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-blue-600 text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Sports & Active</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Dynamic, energetic, high-contrast.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h2 class="text-2xl font-bold text-[#011627] mb-2">Food & Beverage</h2>
-                    <p class="text-gray-500 mb-4 text-sm">Appetizing colors, organic wave dividers, and bold typography. Fresh and modern.</p>
-                    <span class="inline-block bg-[#2EC4B6] text-white text-xs px-2 py-1 rounded font-bold">Layout 10</span>
+            </a>
+
+            <a href="layout_7_luxury.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-zinc-900 text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Luxury Fashion</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Sophisticated, serif typography, gold accents.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_8_kids.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-yellow-100 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Kids & Toys</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Playful, colorful, rounded shapes.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_9_artisanal.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-amber-50 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Artisanal/Handmade</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Textured, rustic, craft-oriented.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_10_food.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-green-50 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Food & Beverage</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Appetizing, vibrant, fresh layout.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_11_streetwear.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-black text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Streetwear</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Edgy, urban, hype-culture focused.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_12_sustainable.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-green-100 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Sustainable</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Eco-friendly, natural tones, clean.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_13_gaming.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-purple-900 text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Gaming Gear</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Cyberpunk, neon, futuristic.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_14_pets.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-orange-100 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Pet Supplies</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Fun, bright, animal-friendly.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_15_books.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-stone-200 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Bookstore</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Classic, serif, text-rich, cozy.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_16_automotive.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-red-900 text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Automotive</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Metallic, aggressive, performance.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_17_watches.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-blue-900 text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Watches</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Precision, luxury, dark blue/gold.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_18_sneakers.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-gray-200 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Sneakers</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Clean, hype, product-focused.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_19_homedecor.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-gray-50 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Home Decor</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Scandi, minimal, soft lighting.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_20_fitness.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-yellow-400 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Fitness</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Intense, black/yellow, gym vibe.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_21_jewelry.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-zinc-800 text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Jewelry</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Elegant, black/gold, sparkling.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_22_coffee.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-orange-200 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Coffee Shop</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Warm browns, aroma, cafe style.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_23_gadgets.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-blue-50 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Gadgets</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Modern, clean, tech-focused.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_24_outdoor.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-green-800 text-white flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Outdoor</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Rugged, nature, forest greens.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_25_art.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-white border flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Art Gallery</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Minimal, white, gallery wall.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_26_music.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-purple-200 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Music/Vinyl</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Retro, vibrant, album art focused.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_27_skincare.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-cyan-50 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Skincare</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Clinical, clean, trust-inspiring.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_28_baby.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-pink-100 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Baby Store</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Soft, pastel, gentle.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_29_stationery.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-stone-100 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Stationery</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Organized, grid, paper textures.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="layout_30_vintage.html" target="_blank" class="group block h-full">
+                <div class="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col transform group-hover:-translate-y-1">
+                    <div class="h-40 bg-amber-100 flex items-center justify-center p-6">
+                        <h3 class="text-2xl font-bold text-center">Vintage</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-2">
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">HTML5</span>
+                                <span class="px-2 py-1 bg-gray-100 text-xs rounded-full font-semibold">Tailwind</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Retro, nostalgic, sepia tones.</p>
+                        </div>
+                        <div class="flex items-center text-indigo-600 font-semibold text-sm group-hover:underline">
+                            View Demo <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </div>
+                    </div>
                 </div>
             </a>
 
         </div>
+    </main>
 
-        <footer class="mt-20 text-center text-gray-400 text-sm">
-            <p>Generated for Shopify Layout Request</p>
-        </footer>
-    </div>
+    <footer class="bg-gray-900 text-white py-12 text-center">
+        <p>&copy; 2024 ShopifyLayouts. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordic Home - Modern Shopify Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap'); body { font-family: 'DM Sans', sans-serif; } h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#f5f5f0] text-[#5d5c56]">
+
+    <!-- Section 1: Navigation -->
+    <nav class="bg-[#f5f5f0] border-b border-[#d8d8d0] sticky top-0 z-50 transition-all duration-300 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter">Hygge.</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-opacity-70 transition">Shop</a>
+                <a href="#" class="hover:text-opacity-70 transition">Collections</a>
+                <a href="#" class="hover:text-opacity-70 transition">About</a>
+                <a href="#" class="hover:text-opacity-70 transition">Journal</a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="hover:scale-110 transition"><i class="fas fa-search"></i></a>
+                <a href="#" class="hover:scale-110 transition"><i class="fas fa-user"></i></a>
+                <a href="#" class="hover:scale-110 transition relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 2: Hero -->
+    <section class="relative h-[75vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=1600" alt="Hero" class="absolute inset-0 w-full h-full object-cover ">
+        <div class="absolute inset-0 bg-[#5d5c56]/10"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="text-6xl md:text-7xl font-normal text-[#2c2b29] mb-6">Make Room for Life</h1>
+            <p class="text-xl text-[#5d5c56] mb-8">Minimalist furniture for the modern soul.</p>
+            <a href="#" class="inline-block bg-[#8c8b82] text-white px-10 py-4 rounded-full hover:bg-[#2c2b29] transition duration-300">Shop the Look</a>
+        </div>
+    </section>
+
+    <!-- Section 3: Logo Cloud -->
+    <section class="bg-[#ebebe5] py-12">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-sm opacity-60 mb-8 uppercase tracking-widest">Featured In</p>
+            <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <i class="fab fa-hooli text-4xl"></i>
+                <i class="fab fa-angrycreative text-4xl"></i>
+                <i class="fab fa-stripe text-4xl"></i>
+                <i class="fab fa-aws text-4xl"></i>
+                <i class="fab fa-pied-piper text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Featured Products Grid -->
+    <section class="bg-[#f5f5f0] py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-4xl text-[#2c2b29]">Trending Now</h2>
+                <a href="#" class="text-sm font-semibold hover:underline">View All -></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Velvet Sofa</h3>
+                    <p class="opacity-70">90</p>
+                </div>
+                 <!-- Product 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Ceramic Vase</h3>
+                    <p class="opacity-70">5</p>
+                </div>
+                 <!-- Product 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1505693416388-b0346809d0bf?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Lounge Chair</h3>
+                    <p class="opacity-70">50</p>
+                </div>
+                 <!-- Product 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Wall Mirror</h3>
+                    <p class="opacity-70">20</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Highlight / Split -->
+    <section class="bg-[#ebebe5] py-0">
+        <div class="flex flex-col md:flex-row h-auto md:h-[600px]">
+            <div class="w-full md:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="w-full md:w-1/2 flex items-center justify-center p-12 md:p-24 bg-white">
+                <div class="max-w-md">
+                    <span class="text-sm font-bold uppercase tracking-wider mb-2 block text-[#8c8b82]">Spotlight</span>
+                    <h2 class="text-4xl text-[#2c2b29] mb-6">Designed for Comfort</h2>
+                    <p class="mb-8 opacity-80 leading-relaxed">Soft textures, warm tones, and functional shapes. Create a sanctuary you never want to leave.</p>
+                    <a href="#" class="underline decoration-2 underline-offset-4 hover:opacity-70">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Categories -->
+    <section class="bg-[#f5f5f0] py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl text-[#2c2b29] text-center mb-16">Browse Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Living Room</h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1595515106967-1b3eb3d6928e?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Bedroom</h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer md:col-span-1 col-span-2">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a1c002085d2f?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Kitchen</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: USP / Features -->
+    <section class="bg-[#e0dfd8] py-16 text-[#2c2b29]">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="p-6">
+                <i class="fas fa-truck text-3xl mb-4 text-[#8c8b82]"></i>
+                <h4 class="font-bold text-lg mb-2">Fast Delivery</h4>
+                <p class="text-sm opacity-70">Tracked shipping worldwide</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-undo text-3xl mb-4 text-[#8c8b82]"></i>
+                <h4 class="font-bold text-lg mb-2">30 Day Returns</h4>
+                <p class="text-sm opacity-70">No questions asked</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-shield-alt text-3xl mb-4 text-[#8c8b82]"></i>
+                <h4 class="font-bold text-lg mb-2">Secure Checkout</h4>
+                <p class="text-sm opacity-70">SSL Encrypted</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-headset text-3xl mb-4 text-[#8c8b82]"></i>
+                <h4 class="font-bold text-lg mb-2">Expert Support</h4>
+                <p class="text-sm opacity-70">We are here to help</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Testimonials -->
+    <section class="bg-[#ebebe5] py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl text-[#2c2b29] mb-12">Customer Reviews</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="text-4xl opacity-30 mb-6">"</div>
+                <p class="text-2xl md:text-3xl font-medium leading-relaxed mb-8">"Transforms the entire room. The simplicity is what makes it so beautiful."</p>
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-12 h-12 rounded-full object-cover">
+                    <div class="text-left">
+                        <div class="font-bold">Jessica W.</div>
+                        <div class="text-sm opacity-60">Verified Purchase</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Blog -->
+    <section class="bg-[#f5f5f0] py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl text-[#2c2b29] mb-12">Latest News</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1582288599424-4f0e20e88383?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Updates</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Color Palettes 2024</h3>
+                    <p class="text-sm opacity-70">Why sage green is taking over.</p>
+                </article>
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1533090368676-1fd25485db88?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Review</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Small Space Hacks</h3>
+                    <p class="text-sm opacity-70">Maximize your apartment layout.</p>
+                </article>
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Guide</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Lighting Guide</h3>
+                    <p class="text-sm opacity-70">Setting the mood with lamps.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Instagram -->
+    <section class="py-4">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-0">
+            <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+            <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1522771753014-df70f1c270c4?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Newsletter -->
+    <section class="bg-[#ebebe5] py-24 border-t border-[#d8d8d0]">
+        <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-4xl text-[#2c2b29] mb-4">Stay Tuned</h2>
+            <p class="opacity-60 mb-8">Subscribe to our newsletter for exclusive deals and updates.</p>
+            <form class="flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Email Address" class="flex-1 bg-transparent border-b-2 border-[#8c8b82] py-3 px-4 focus:outline-none focus:border-current transition">
+                <button type="button" class="bg-[#2c2b29] text-white px-8 py-3 rounded-full hover:bg-[#5d5c56] transition">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section 12: Footer -->
+    <footer class="bg-[#2c2b29] text-[#ebebe5] py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">Hygge.</h3>
+                    <p class="opacity-70 leading-relaxed">Quality and performance since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Explore</h4>
+                    <ul class="space-y-3 opacity-70">
+                        <li><a href="#" class="hover:underline">Shop</a></li>
+                        <li><a href="#" class="hover:underline">About</a></li>
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                        <li><a href="#" class="hover:underline">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Help</h4>
+                    <ul class="space-y-3 opacity-70">
+                        <li><a href="#" class="hover:underline">Contact</a></li>
+                        <li><a href="#" class="hover:underline">Shipping</a></li>
+                        <li><a href="#" class="hover:underline">Returns</a></li>
+                        <li><a href="#" class="hover:underline">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#5d5c56] pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-60">
+                <p>&copy; 2024 Hygge.. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                   <i class="fab fa-cc-visa text-2xl"></i>
+                   <i class="fab fa-cc-mastercard text-2xl"></i>
+                   <i class="fab fa-cc-amex text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakerHead - Modern Shopify Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700&display=swap'); body { font-family: 'Inter', sans-serif; } h1, h2, h3, h4 { font-family: 'Anton', sans-serif; letter-spacing: 1px; }
+    </style>
+</head>
+<body class="bg-gray-100 text-black">
+
+    <!-- Section 1: Navigation -->
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter">KICKZ</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-opacity-70 transition">Shop</a>
+                <a href="#" class="hover:text-opacity-70 transition">Collections</a>
+                <a href="#" class="hover:text-opacity-70 transition">About</a>
+                <a href="#" class="hover:text-opacity-70 transition">Journal</a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="hover:scale-110 transition"><i class="fas fa-search"></i></a>
+                <a href="#" class="hover:scale-110 transition"><i class="fas fa-user"></i></a>
+                <a href="#" class="hover:scale-110 transition relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 2: Hero -->
+    <section class="relative h-[75vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1556906781-9a412961d289?auto=format&fit=crop&q=80&w=1600" alt="Hero" class="absolute inset-0 w-full h-full object-cover ">
+        <div class="absolute inset-0 bg-white/10"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="text-7xl md:text-9xl font-black text-black leading-none mb-6">JUST DROPPED</h1>
+            <p class="text-xl font-bold bg-black text-white inline-block px-2 mb-8">Limited quantities available. Don't sleep.</p>
+            <a href="#" class="inline-block bg-black text-white font-bold text-xl px-12 py-4 hover:bg-blue-600 transition duration-300">SHOP NOW</a>
+        </div>
+    </section>
+
+    <!-- Section 3: Logo Cloud -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-sm opacity-60 mb-8 uppercase tracking-widest">Featured In</p>
+            <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <i class="fab fa-hooli text-4xl"></i>
+                <i class="fab fa-angrycreative text-4xl"></i>
+                <i class="fab fa-stripe text-4xl"></i>
+                <i class="fab fa-aws text-4xl"></i>
+                <i class="fab fa-pied-piper text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Featured Products Grid -->
+    <section class="bg-gray-50 py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-5xl font-black uppercase text-black">Trending Now</h2>
+                <a href="#" class="text-sm font-semibold hover:underline">View All -></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Air Jordan 1</h3>
+                    <p class="opacity-70">70</p>
+                </div>
+                 <!-- Product 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Nike Dunk Low</h3>
+                    <p class="opacity-70">10</p>
+                </div>
+                 <!-- Product 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Yeezy Boost</h3>
+                    <p class="opacity-70">40</p>
+                </div>
+                 <!-- Product 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">New Balance 550</h3>
+                    <p class="opacity-70">20</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Highlight / Split -->
+    <section class="bg-white py-0">
+        <div class="flex flex-col md:flex-row h-auto md:h-[600px]">
+            <div class="w-full md:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="w-full md:w-1/2 flex items-center justify-center p-12 md:p-24 bg-black text-white">
+                <div class="max-w-md">
+                    <span class="text-sm font-bold uppercase tracking-wider mb-2 block text-blue-500">Spotlight</span>
+                    <h2 class="text-5xl font-black uppercase text-black mb-6">GRAIL STATUS</h2>
+                    <p class="mb-8 opacity-80 leading-relaxed">We verify every single pair so you never have to worry about fakes. Authenticity guaranteed.</p>
+                    <a href="#" class="underline decoration-2 underline-offset-4 hover:opacity-70">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Categories -->
+    <section class="bg-gray-50 py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black uppercase text-black text-center mb-16">Browse Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="group relative aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Basketball</h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1515555230216-82228b88ea98?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Running</h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 cursor-pointer md:col-span-1 col-span-2">
+                    <img src="https://images.unsplash.com/photo-1603787081207-362bcef7c144?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Lifestyle</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: USP / Features -->
+    <section class="bg-blue-600 py-16 text-white">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="p-6">
+                <i class="fas fa-truck text-3xl mb-4 text-black"></i>
+                <h4 class="font-bold text-lg mb-2">Fast Delivery</h4>
+                <p class="text-sm opacity-70">Tracked shipping worldwide</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-undo text-3xl mb-4 text-black"></i>
+                <h4 class="font-bold text-lg mb-2">30 Day Returns</h4>
+                <p class="text-sm opacity-70">No questions asked</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-shield-alt text-3xl mb-4 text-black"></i>
+                <h4 class="font-bold text-lg mb-2">Secure Checkout</h4>
+                <p class="text-sm opacity-70">SSL Encrypted</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-headset text-3xl mb-4 text-black"></i>
+                <h4 class="font-bold text-lg mb-2">Expert Support</h4>
+                <p class="text-sm opacity-70">We are here to help</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Testimonials -->
+    <section class="bg-white py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-black uppercase text-black mb-12">Customer Reviews</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="text-4xl opacity-30 mb-6">"</div>
+                <p class="text-2xl md:text-3xl font-medium leading-relaxed mb-8">"Fast shipping and the box came in pristine condition. 10/10."</p>
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" class="w-12 h-12 rounded-full object-cover">
+                    <div class="text-left">
+                        <div class="font-bold">Mike T.</div>
+                        <div class="text-sm opacity-60">Verified Purchase</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Blog -->
+    <section class="bg-gray-50 py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl font-black uppercase text-black mb-12">Latest News</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Updates</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Sneaker Con Recap</h3>
+                    <p class="text-sm opacity-70">Best kicks seen on foot.</p>
+                </article>
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1465453869711-7e174808ace9?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Review</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">How to Clean Suede</h3>
+                    <p class="text-sm opacity-70">Don't ruin your new pickups.</p>
+                </article>
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow bg-white p-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Guide</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Resale Market Trends</h3>
+                    <p class="text-sm opacity-70">What's going up in value?</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Instagram -->
+    <section class="py-4">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-0">
+            <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+            <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1560769629-975e127df717?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1520256862855-398228c45627?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1514989940723-e8875ea15f77?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Newsletter -->
+    <section class="bg-white py-24 border-t border-black">
+        <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-5xl font-black uppercase text-black mb-4">Stay Tuned</h2>
+            <p class="opacity-60 mb-8">Subscribe to our newsletter for exclusive deals and updates.</p>
+            <form class="flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Email Address" class="flex-1 bg-transparent border-b-2 border-black py-3 px-4 focus:outline-none focus:border-current transition">
+                <button type="button" class="bg-black text-white font-bold py-3 px-8 hover:bg-blue-600 transition">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section 12: Footer -->
+    <footer class="bg-white text-black py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">KICKZ</h3>
+                    <p class="opacity-70 leading-relaxed">Quality and performance since 2010.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Explore</h4>
+                    <ul class="space-y-3 opacity-70">
+                        <li><a href="#" class="hover:underline">Shop</a></li>
+                        <li><a href="#" class="hover:underline">About</a></li>
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                        <li><a href="#" class="hover:underline">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Help</h4>
+                    <ul class="space-y-3 opacity-70">
+                        <li><a href="#" class="hover:underline">Contact</a></li>
+                        <li><a href="#" class="hover:underline">Shipping</a></li>
+                        <li><a href="#" class="hover:underline">Returns</a></li>
+                        <li><a href="#" class="hover:underline">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-60">
+                <p>&copy; 2024 KICKZ. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                   <i class="fab fa-cc-visa text-2xl"></i>
+                   <i class="fab fa-cc-mastercard text-2xl"></i>
+                   <i class="fab fa-cc-amex text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

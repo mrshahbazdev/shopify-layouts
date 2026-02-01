@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roast & Brew - Modern Shopify Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans:wght@400;600&display=swap'); body { font-family: 'Open Sans', sans-serif; } h1, h2, h3, h4 { font-family: 'Roboto Slab', serif; }
+    </style>
+</head>
+<body class="bg-[#fcf8f2] text-[#3e2723]">
+
+    <!-- Section 1: Navigation -->
+    <nav class="bg-[#fffdf9] border-b border-[#d7ccc8] sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter">BEANSTALK</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-opacity-70 transition">Shop</a>
+                <a href="#" class="hover:text-opacity-70 transition">Collections</a>
+                <a href="#" class="hover:text-opacity-70 transition">About</a>
+                <a href="#" class="hover:text-opacity-70 transition">Journal</a>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#" class="hover:scale-110 transition"><i class="fas fa-search"></i></a>
+                <a href="#" class="hover:scale-110 transition"><i class="fas fa-user"></i></a>
+                <a href="#" class="hover:scale-110 transition relative">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">2</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 2: Hero -->
+    <section class="relative h-[75vh] flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1600" alt="Hero" class="absolute inset-0 w-full h-full object-cover sepia-[.3]">
+        <div class="absolute inset-0 bg-[#3e2723]/30"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-bold text-white drop-shadow-lg mb-6">Wake Up Better</h1>
+            <p class="text-2xl text-white font-medium drop-shadow-md mb-8">Small batch roasted. Delivered fresh.</p>
+            <a href="#" class="inline-block bg-[#6d4c41] text-white px-10 py-4 rounded shadow-lg hover:bg-[#4e342e] transition">Shop Beans</a>
+        </div>
+    </section>
+
+    <!-- Section 3: Logo Cloud -->
+    <section class="bg-[#efebe9] py-12">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-sm opacity-60 mb-8 uppercase tracking-widest">Seen On</p>
+            <div class="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <i class="fab fa-hooli text-4xl"></i>
+                <i class="fab fa-angrycreative text-4xl"></i>
+                <i class="fab fa-stripe text-4xl"></i>
+                <i class="fab fa-aws text-4xl"></i>
+                <i class="fab fa-pied-piper text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Featured Products Grid -->
+    <section class="bg-[#fcf8f2] py-20">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <h2 class="text-4xl font-bold text-[#4e342e]">Curated Selection</h2>
+                <a href="#" class="text-sm font-semibold hover:underline">View All -></a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg border border-[#d7ccc8] mb-4">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Ethiopia Yirgacheffe</h3>
+                    <p class="opacity-70">9.00</p>
+                </div>
+                 <!-- Product 2 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg border border-[#d7ccc8] mb-4">
+                        <img src="https://images.unsplash.com/photo-1610632380989-680fe40816c6?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Colombia Supremo</h3>
+                    <p class="opacity-70">6.50</p>
+                </div>
+                 <!-- Product 3 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg border border-[#d7ccc8] mb-4">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">Espresso Blend</h3>
+                    <p class="opacity-70">8.00</p>
+                </div>
+                 <!-- Product 4 -->
+                <div class="group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-lg border border-[#d7ccc8] mb-4">
+                        <img src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?auto=format&fit=crop&q=80&w=600" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                         <div class="absolute bottom-4 right-4 translate-y-full group-hover:translate-y-0 transition duration-300">
+                            <button class="bg-white text-black p-3 rounded-full shadow-lg hover:bg-gray-100"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-lg">French Roast</h3>
+                    <p class="opacity-70">6.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Highlight / Split -->
+    <section class="bg-[#efebe9] py-0">
+        <div class="flex flex-col md:flex-row h-auto md:h-[600px]">
+            <div class="w-full md:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&q=80&w=1000" class="absolute inset-0 w-full h-full object-cover">
+            </div>
+            <div class="w-full md:w-1/2 flex items-center justify-center p-12 md:p-24 bg-white">
+                <div class="max-w-md">
+                    <span class="text-sm font-bold uppercase tracking-wider mb-2 block text-[#6d4c41]">Craftsmanship</span>
+                    <h2 class="text-4xl font-bold text-[#4e342e] mb-6">Farm to Cup</h2>
+                    <p class="mb-8 opacity-80 leading-relaxed">We build direct relationships with farmers to ensure fair wages and the highest quality beans.</p>
+                    <a href="#" class="underline decoration-2 underline-offset-4 hover:opacity-70">Discover More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Categories -->
+    <section class="bg-[#fcf8f2] py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-[#4e342e] text-center mb-16">Collections</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="group relative aspect-square overflow-hidden rounded-lg border border-[#d7ccc8] cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Single Origin</h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-lg border border-[#d7ccc8] cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1507133750069-69d3cdad19e5?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Blends</h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-square overflow-hidden rounded-lg border border-[#d7ccc8] cursor-pointer md:col-span-1 col-span-2">
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <h3 class="text-white text-2xl font-bold uppercase">Brew Gear</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: USP / Features -->
+    <section class="bg-[#4e342e] py-16 text-[#d7ccc8]">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div class="p-6">
+                <i class="fas fa-truck text-3xl mb-4 text-white"></i>
+                <h4 class="font-bold text-lg mb-2">Global Shipping</h4>
+                <p class="text-sm opacity-70">To over 100 countries</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-undo text-3xl mb-4 text-white"></i>
+                <h4 class="font-bold text-lg mb-2">Lifetime Warranty</h4>
+                <p class="text-sm opacity-70">On all mechanical parts</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-shield-alt text-3xl mb-4 text-white"></i>
+                <h4 class="font-bold text-lg mb-2">Authenticity</h4>
+                <p class="text-sm opacity-70">100% Verified</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-headset text-3xl mb-4 text-white"></i>
+                <h4 class="font-bold text-lg mb-2">Concierge</h4>
+                <p class="text-sm opacity-70">Personal shopping assistant</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Testimonials -->
+    <section class="bg-[#efebe9] py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-[#4e342e] mb-12">Client Love</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="text-4xl opacity-30 mb-6">"</div>
+                <p class="text-2xl md:text-3xl font-medium leading-relaxed mb-8">"The aroma filling my kitchen every morning is worth every penny."</p>
+                <div class="flex items-center justify-center space-x-4">
+                    <img src="https://randomuser.me/api/portraits/women/29.jpg" class="w-12 h-12 rounded-full object-cover">
+                    <div class="text-left">
+                        <div class="font-bold">Linda M.</div>
+                        <div class="text-sm opacity-60">VIP Client</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Blog -->
+    <section class="bg-[#fcf8f2] py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-[#4e342e] mb-12">Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg border border-[#d7ccc8] mb-4">
+                        <img src="https://images.unsplash.com/photo-1442512595331-e89e7385a861?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Inspiration</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Brew Guide: V60</h3>
+                    <p class="text-sm opacity-70">Master the pour over.</p>
+                </article>
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg border border-[#d7ccc8] mb-4">
+                        <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Process</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Arabica vs Robusta</h3>
+                    <p class="text-sm opacity-70">What's the difference?</p>
+                </article>
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-lg border border-[#d7ccc8] mb-4">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <span class="text-xs font-bold uppercase tracking-wider opacity-60 mb-2 block">Events</span>
+                    <h3 class="text-xl font-bold mb-2 group-hover:underline">Iced Coffee Season</h3>
+                    <p class="text-sm opacity-70">Cold brew recipes.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 10: Instagram -->
+    <section class="py-4">
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-0">
+            <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+            <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+             <div class="aspect-square relative group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=300" class="w-full h-full object-cover group-hover:scale-110 transition">
+                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition text-white">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 11: Newsletter -->
+    <section class="bg-[#efebe9] py-24 border-t border-[#d7ccc8]">
+        <div class="container mx-auto px-6 text-center max-w-2xl">
+            <h2 class="text-4xl font-bold text-[#4e342e] mb-4">Join the List</h2>
+            <p class="opacity-60 mb-8">First access to new arrivals and exclusive events.</p>
+            <form class="flex flex-col sm:flex-row gap-4">
+                <input type="email" placeholder="Email Address" class="flex-1 bg-transparent border-b-2 border-[#6d4c41] py-3 px-4 focus:outline-none focus:border-current transition">
+                <button type="button" class="bg-[#6d4c41] text-white px-8 py-3 rounded hover:bg-[#4e342e] transition">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Section 12: Footer -->
+    <footer class="bg-[#3e2723] text-[#d7ccc8] py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">BEANSTALK</h3>
+                    <p class="opacity-70 leading-relaxed">Excellence in every detail.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Boutique</h4>
+                    <ul class="space-y-3 opacity-70">
+                        <li><a href="#" class="hover:underline">New In</a></li>
+                        <li><a href="#" class="hover:underline">Best Sellers</a></li>
+                        <li><a href="#" class="hover:underline">Gifts</a></li>
+                        <li><a href="#" class="hover:underline">Sale</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Services</h4>
+                    <ul class="space-y-3 opacity-70">
+                        <li><a href="#" class="hover:underline">Contact Us</a></li>
+                        <li><a href="#" class="hover:underline">Shipping</a></li>
+                        <li><a href="#" class="hover:underline">Returns</a></li>
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Social</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="hover:text-opacity-70"><i class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-[#5d4037] pt-8 flex flex-col md:flex-row justify-between items-center text-sm opacity-60">
+                <p>&copy; 2024 BEANSTALK. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                   <i class="fab fa-cc-visa text-2xl"></i>
+                   <i class="fab fa-cc-mastercard text-2xl"></i>
+                   <i class="fab fa-cc-paypal text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
