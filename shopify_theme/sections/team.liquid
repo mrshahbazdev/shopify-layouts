@@ -1,0 +1,100 @@
+<section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+             {% if section.settings.image != blank %}
+                <img src="{{ section.settings.image | image_url: width: 1200 }}" class="rounded-xl shadow-lg" alt="Team">
+            {% else %}
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="rounded-xl shadow-lg" alt="Team">
+            {% endif %}
+        </div>
+        <div class="w-full md:w-1/2 space-y-6">
+            <span class="text-accent font-bold uppercase tracking-widest text-sm">{{ section.settings.eyebrow }}</span>
+            <h2 class="text-3xl font-serif font-bold">{{ section.settings.title | newline_to_br }}</h2>
+            <p class="text-gray-600 leading-relaxed">
+                {{ section.settings.text }}
+            </p>
+            <div class="grid grid-cols-2 gap-6 pt-4">
+                <div>
+                    <h4 class="text-3xl font-bold text-primary">{{ section.settings.stat1_number }}</h4>
+                    <p class="text-sm text-gray-500 uppercase">{{ section.settings.stat1_text }}</p>
+                </div>
+                <div>
+                    <h4 class="text-3xl font-bold text-primary">{{ section.settings.stat2_number }}</h4>
+                    <p class="text-sm text-gray-500 uppercase">{{ section.settings.stat2_text }}</p>
+                </div>
+            </div>
+            <a href="{{ section.settings.link }}" class="inline-block border-b-2 border-primary pb-1 font-bold hover:text-accent hover:border-accent transition mt-4">{{ section.settings.link_text }}</a>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Team / Story",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Our Story"
+    },
+    {
+      "type": "textarea",
+      "id": "title",
+      "label": "Title",
+      "default": "Crafted with Passion. \nDefined by Quality."
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Founded in 2010, LUXE started with a simple mission..."
+    },
+    {
+      "type": "text",
+      "id": "stat1_number",
+      "label": "Stat 1 Number",
+      "default": "10+"
+    },
+    {
+      "type": "text",
+      "id": "stat1_text",
+      "label": "Stat 1 Text",
+      "default": "Years of Service"
+    },
+    {
+      "type": "text",
+      "id": "stat2_number",
+      "label": "Stat 2 Number",
+      "default": "50k+"
+    },
+    {
+      "type": "text",
+      "id": "stat2_text",
+      "label": "Stat 2 Text",
+      "default": "Happy Customers"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Read Our Full Story"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Team / Story"
+    }
+  ]
+}
+{% endschema %}

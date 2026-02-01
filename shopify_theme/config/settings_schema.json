@@ -1,0 +1,26 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Luxe Mega Theme",
+    "theme_author": "Jules",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://github.com/example"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "primary_color",
+        "label": "Primary Color",
+        "default": "#1a1a1a"
+      },
+      {
+        "type": "color",
+        "id": "accent_color",
+        "label": "Accent Color",
+        "default": "#3b82f6"
+      }
+    ]
+  }
+]

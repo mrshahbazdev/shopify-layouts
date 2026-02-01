@@ -1,0 +1,74 @@
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-serif font-bold text-center mb-16">{{ section.settings.title }}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for block in section.blocks %}
+                <div class="bg-white p-8 shadow-sm rounded-xl">
+                    <div class="text-accent mb-4"><i class="fas fa-quote-left text-2xl"></i></div>
+                    <p class="text-gray-600 mb-6 italic">"{{ block.settings.quote }}"</p>
+                    <div class="flex items-center gap-4">
+                        {% if block.settings.image != blank %}
+                             <img src="{{ block.settings.image | image_url: width: 100 }}" class="w-12 h-12 rounded-full" alt="User">
+                        {% else %}
+                             <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500"><i class="fas fa-user"></i></div>
+                        {% endif %}
+                        <div>
+                            <h5 class="font-bold text-sm">{{ block.settings.author }}</h5>
+                            <p class="text-xs text-gray-400">{{ block.settings.role }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "What Our Clients Say"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "The quality of the fabrics is outstanding."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author",
+          "default": "Sarah Jenkins"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Role",
+          "default": "Verified Buyer"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Author Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials"
+    }
+  ]
+}
+{% endschema %}

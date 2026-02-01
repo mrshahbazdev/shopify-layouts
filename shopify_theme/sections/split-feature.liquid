@@ -1,0 +1,62 @@
+<section class="grid grid-cols-1 md:grid-cols-2">
+    <div class="h-96 md:h-auto relative">
+        {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | image_url: width: 1200 }}" class="absolute inset-0 w-full h-full object-cover" alt="Feature">
+        {% else %}
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" class="absolute inset-0 w-full h-full object-cover" alt="Feature">
+        {% endif %}
+    </div>
+    <div class="bg-primary text-white p-12 md:p-24 flex flex-col justify-center items-start">
+        <span class="text-accent text-sm font-bold uppercase tracking-widest mb-4">{{ section.settings.eyebrow }}</span>
+        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">{{ section.settings.title }}</h2>
+        <p class="text-gray-400 mb-8 leading-relaxed max-w-md">{{ section.settings.text }}</p>
+        <a href="{{ section.settings.link }}" class="text-white border-b border-white pb-1 font-bold tracking-widest uppercase text-sm hover:text-accent hover:border-accent transition">{{ section.settings.link_text }}</a>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Split Feature",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Limited Edition"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "The Midnight Collection"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Text",
+      "default": "Discover the allure of dark tones and premium textures. Crafted for those who own the night."
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "Link Text",
+      "default": "Explore The Edit"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Split Feature"
+    }
+  ]
+}
+{% endschema %}

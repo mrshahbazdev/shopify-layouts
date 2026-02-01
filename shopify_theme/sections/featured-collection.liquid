@@ -1,0 +1,75 @@
+<section class="py-20">
+    <div class="container mx-auto px-6">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-serif font-bold mb-2">{{ section.settings.title }}</h2>
+                <p class="text-gray-500">{{ section.settings.subtitle }}</p>
+            </div>
+            <a href="{{ collections[section.settings.collection].url }}" class="hidden md:block text-sm font-bold underline decoration-1 underline-offset-4">View All</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% assign collection = collections[section.settings.collection] %}
+            {% for product in collection.products limit: 4 %}
+                <div class="group">
+                    <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                        <img src="{{ product.featured_image | image_url: width: 800 }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="{{ product.title }}">
+                        {% if product.compare_at_price > product.price %}
+                            <span class="absolute top-4 left-4 bg-red-500 text-white text-xs px-2 py-1 font-bold uppercase tracking-wider">Sale</span>
+                        {% endif %}
+                        <button class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-lg translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-300"><i class="fas fa-plus"></i></button>
+                    </div>
+                    <h3 class="font-medium text-lg">{{ product.title }}</h3>
+                    <p class="text-gray-500 text-sm mb-2">{{ product.type }}</p>
+                    <div class="flex gap-2">
+                        <span class="font-bold {% if product.compare_at_price > product.price %}text-red-500{% endif %}">{{ product.price | money }}</span>
+                        {% if product.compare_at_price > product.price %}
+                            <span class="text-gray-400 line-through">{{ product.compare_at_price | money }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            {% else %}
+                 <!-- Fallback items if no collection selected -->
+                 {% for i in (1..4) %}
+                    <div class="group">
+                        <div class="relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                             {{ 'product-1' | placeholder_svg_tag: 'w-full h-full object-cover group-hover:scale-105 transition duration-500 text-gray-300' }}
+                        </div>
+                        <h3 class="font-medium text-lg">Product Title</h3>
+                        <p class="text-gray-500 text-sm mb-2">Category</p>
+                        <span class="font-bold">$99.00</span>
+                    </div>
+                 {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Fresh finds for the season."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}

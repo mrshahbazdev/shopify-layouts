@@ -1,0 +1,124 @@
+<footer class="bg-gray-900 text-gray-300 pt-20 pb-10 border-t border-gray-800">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div>
+                <a href="{{ routes.root_url }}" class="text-2xl font-serif font-bold text-white tracking-tighter block mb-6">{{ section.settings.logo_text }}</a>
+                <p class="text-gray-500 mb-6">{{ section.settings.description }}</p>
+                <div class="flex space-x-4">
+                    {% if section.settings.facebook != blank %}
+                        <a href="{{ section.settings.facebook }}" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    {% endif %}
+                    {% if section.settings.twitter != blank %}
+                        <a href="{{ section.settings.twitter }}" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    {% endif %}
+                    {% if section.settings.instagram != blank %}
+                        <a href="{{ section.settings.instagram }}" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-accent hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    {% endif %}
+                </div>
+            </div>
+            {% for block in section.blocks %}
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-widest mb-6">{{ block.settings.title }}</h4>
+                    <ul class="space-y-4 text-sm">
+                        {% for link in linklists[block.settings.menu].links %}
+                            <li><a href="{{ link.url }}" class="hover:text-accent transition">{{ link.title }}</a></li>
+                        {% else %}
+                             <li><a href="#" class="hover:text-accent transition">Link 1</a></li>
+                             <li><a href="#" class="hover:text-accent transition">Link 2</a></li>
+                             <li><a href="#" class="hover:text-accent transition">Link 3</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+            <div>
+                 <h4 class="text-white font-bold uppercase tracking-widest mb-6">Contact</h4>
+                 <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1 text-gray-500"></i> {{ section.settings.address }}</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-phone mt-1 text-gray-500"></i> {{ section.settings.phone }}</li>
+                    <li class="flex items-start gap-3"><i class="fas fa-envelope mt-1 text-gray-500"></i> {{ section.settings.email }}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-xs text-gray-500">&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}. All rights reserved.</p>
+            <div class="flex gap-4">
+                <i class="fab fa-cc-visa text-2xl text-gray-500"></i>
+                <i class="fab fa-cc-mastercard text-2xl text-gray-500"></i>
+                <i class="fab fa-cc-amex text-2xl text-gray-500"></i>
+                <i class="fab fa-cc-paypal text-2xl text-gray-500"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo Text",
+      "default": "LUXE."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Redefining modern luxury through sustainable design and exceptional craftsmanship."
+    },
+    {
+      "type": "url",
+      "id": "facebook",
+      "label": "Facebook Link"
+    },
+    {
+      "type": "url",
+      "id": "twitter",
+      "label": "Twitter Link"
+    },
+    {
+      "type": "url",
+      "id": "instagram",
+      "label": "Instagram Link"
+    },
+    {
+      "type": "textarea",
+      "id": "address",
+      "label": "Address",
+      "default": "123 Fashion Ave, <br>New York, NY 10001"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "Phone",
+      "default": "+1 (555) 123-4567"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Email",
+      "default": "hello@luxe.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Menu Title"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Menu"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

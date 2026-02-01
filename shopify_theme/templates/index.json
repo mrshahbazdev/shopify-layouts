@@ -1,0 +1,176 @@
+{
+  "sections": {
+    "announcement_bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "text": "Free Shipping on all orders over $150 — Worldwide"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "logo_text": "LUXE."
+      }
+    },
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "heading": "Elevate Your \nEveryday Style",
+        "subheading": "New Collection 2024"
+      }
+    },
+    "logo_cloud": {
+      "type": "logo-cloud",
+      "blocks": {
+        "logo_1": { "type": "logo", "settings": { "icon_class": "fab fa-vogue" } },
+        "logo_2": { "type": "logo", "settings": { "icon_class": "fab fa-google" } },
+        "logo_3": { "type": "logo", "settings": { "icon_class": "fab fa-spotify" } },
+        "logo_4": { "type": "logo", "settings": { "icon_class": "fab fa-apple" } },
+        "logo_5": { "type": "logo", "settings": { "icon_class": "fab fa-amazon" } }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5"]
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals"
+      }
+    },
+    "split_feature": {
+      "type": "split-feature",
+      "settings": {
+        "title": "The Midnight Collection"
+      }
+    },
+    "marquee": {
+      "type": "marquee",
+      "settings": {
+        "text": "New Styles Added"
+      }
+    },
+    "categories": {
+      "type": "categories",
+      "blocks": {
+        "cat_1": { "type": "category", "settings": { "title": "Dresses" } },
+        "cat_2": { "type": "category", "settings": { "title": "Denim" } },
+        "cat_3": { "type": "category", "settings": { "title": "Shoes" } },
+        "cat_4": { "type": "category", "settings": { "title": "Accessories" } },
+        "cat_5": { "type": "category", "settings": { "title": "Bags" } },
+        "cat_6": { "type": "category", "settings": { "title": "Activewear" } }
+      },
+      "block_order": ["cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6"]
+    },
+    "product_spotlight": {
+      "type": "product-spotlight",
+      "settings": {
+      }
+    },
+    "features_grid": {
+      "type": "features-grid",
+      "blocks": {
+        "feat_1": { "type": "feature", "settings": { "icon": "fas fa-truck-moving", "title": "Free Shipping" } },
+        "feat_2": { "type": "feature", "settings": { "icon": "fas fa-undo", "title": "Easy Returns" } },
+        "feat_3": { "type": "feature", "settings": { "icon": "fas fa-lock", "title": "Secure Payment" } },
+        "feat_4": { "type": "feature", "settings": { "icon": "fas fa-headset", "title": "24/7 Support" } }
+      },
+      "block_order": ["feat_1", "feat_2", "feat_3", "feat_4"]
+    },
+    "deal_of_day": {
+      "type": "deal-of-day",
+      "settings": {
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "test_1": { "type": "testimonial", "settings": { "author": "Sarah Jenkins" } },
+        "test_2": { "type": "testimonial", "settings": { "author": "Michael Ross" } },
+        "test_3": { "type": "testimonial", "settings": { "author": "Emma Wilson" } }
+      },
+      "block_order": ["test_1", "test_2", "test_3"]
+    },
+    "best_sellers": {
+      "type": "best-sellers",
+      "settings": {
+      }
+    },
+    "lookbook": {
+      "type": "lookbook",
+      "blocks": {
+        "look_1": { "type": "image" },
+        "look_2": { "type": "image" },
+        "look_3": { "type": "image" },
+        "look_4": { "type": "image" },
+        "look_5": { "type": "image" },
+        "look_6": { "type": "image" }
+      },
+      "block_order": ["look_1", "look_2", "look_3", "look_4", "look_5", "look_6"]
+    },
+    "team": {
+      "type": "team",
+      "settings": {
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "faq_1": { "type": "question", "settings": { "question": "How long does shipping take?" } },
+        "faq_2": { "type": "question", "settings": { "question": "What is your return policy?" } },
+        "faq_3": { "type": "question", "settings": { "question": "Do you ship internationally?" } }
+      },
+      "block_order": ["faq_1", "faq_2", "faq_3"]
+    },
+    "blog_posts": {
+      "type": "blog-posts",
+      "settings": {
+      }
+    },
+    "social_feed": {
+      "type": "social-feed",
+      "blocks": {
+        "soc_1": { "type": "image" },
+        "soc_2": { "type": "image" },
+        "soc_3": { "type": "image" },
+        "soc_4": { "type": "image" },
+        "soc_5": { "type": "image" },
+        "soc_6": { "type": "image" }
+      },
+      "block_order": ["soc_1", "soc_2", "soc_3", "soc_4", "soc_5", "soc_6"]
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "settings": {
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu_1": { "type": "menu", "settings": { "title": "Shop" } },
+        "menu_2": { "type": "menu", "settings": { "title": "Help" } }
+      },
+      "block_order": ["menu_1", "menu_2"]
+    }
+  },
+  "order": [
+    "announcement_bar",
+    "header",
+    "hero",
+    "logo_cloud",
+    "featured_collection",
+    "split_feature",
+    "marquee",
+    "categories",
+    "product_spotlight",
+    "features_grid",
+    "deal_of_day",
+    "testimonials",
+    "best_sellers",
+    "lookbook",
+    "team",
+    "faq",
+    "blog_posts",
+    "social_feed",
+    "newsletter",
+    "footer"
+  ]
+}

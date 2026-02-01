@@ -1,0 +1,17 @@
+<div class="bg-primary text-white text-xs py-2 text-center tracking-wider uppercase font-medium">
+  {{ section.settings.text }}
+</div>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Announcement Text",
+      "default": "Free Shipping on all orders over $150 — Worldwide"
+    }
+  ]
+}
+{% endschema %}

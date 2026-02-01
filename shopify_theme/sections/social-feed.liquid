@@ -1,0 +1,53 @@
+<section class="py-12">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-2xl font-serif font-bold mb-2">{{ section.settings.handle }}</h2>
+        <p class="text-gray-500 mb-8">{{ section.settings.text }}</p>
+        <div class="grid grid-cols-2 md:grid-cols-6 gap-2">
+            {% for block in section.blocks %}
+                {% if block.settings.image != blank %}
+                    <img src="{{ block.settings.image | image_url: width: 400 }}" class="w-full aspect-square object-cover hover:opacity-80 transition cursor-pointer" alt="Social">
+                {% else %}
+                    {{ 'image' | placeholder_svg_tag: 'w-full aspect-square object-cover hover:opacity-80 transition cursor-pointer bg-gray-200' }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Social Feed",
+  "settings": [
+    {
+      "type": "text",
+      "id": "handle",
+      "label": "Social Handle",
+      "default": "@LUXE_OFFICIAL"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Follow us on Instagram for daily inspiration."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Social Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social Feed"
+    }
+  ]
+}
+{% endschema %}

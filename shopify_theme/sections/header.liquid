@@ -1,0 +1,51 @@
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
+
+        <!-- Logo -->
+        <a href="{{ routes.root_url }}" class="text-2xl font-serif font-bold tracking-tighter">{{ section.settings.logo_text }}</a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex space-x-8 text-sm font-medium uppercase tracking-wide text-gray-600">
+            {% for link in linklists[section.settings.menu].links %}
+              <a href="{{ link.url }}" class="hover:text-primary transition">{{ link.title }}</a>
+            {% else %}
+              <a href="#" class="hover:text-primary transition">Shop</a>
+              <a href="#" class="hover:text-primary transition">Collections</a>
+              <a href="#" class="hover:text-primary transition">About</a>
+              <a href="#" class="hover:text-primary transition">Journal</a>
+            {% endfor %}
+        </nav>
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-6 text-lg text-gray-700">
+            <button class="hover:text-primary"><i class="fas fa-search"></i></button>
+            <button class="hover:text-primary"><i class="far fa-user"></i></button>
+            <button class="hover:text-primary relative">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="absolute -top-1 -right-2 bg-accent text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">2</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo_text",
+      "label": "Logo Text",
+      "default": "LUXE."
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}
