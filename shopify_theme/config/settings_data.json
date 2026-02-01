@@ -1,0 +1,13 @@
+{
+  "current": "Luxe Mega Theme",
+  "presets": {
+    "Luxe Mega Theme": {
+      "name": "Luxe Mega Theme",
+      "settings": {
+        "primary_color": "#1a1a1a",
+        "secondary_color": "#f4f4f5",
+        "accent_color": "#3b82f6"
+      }
+    }
+  }
+}
