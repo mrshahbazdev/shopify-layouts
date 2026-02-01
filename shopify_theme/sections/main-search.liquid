@@ -1,0 +1,42 @@
+<section class="container mx-auto px-6 py-20 max-w-5xl">
+  <h1 class="text-3xl font-serif font-bold mb-8 text-center">Search Results</h1>
+
+  <form action="{{ routes.search_url }}" method="get" class="max-w-xl mx-auto mb-16 relative">
+    <input type="text" name="q" placeholder="Search..." class="w-full border border-gray-300 rounded-full px-6 py-3 outline-none focus:border-black transition" value="{{ search.terms }}">
+    <button type="submit" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black">
+      <i class="fas fa-search"></i>
+    </button>
+  </form>
+
+  {% if search.performed %}
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {% for item in search.results %}
+        <div class="group">
+          {% if item.object_type == 'product' %}
+             <a href="{{ item.url }}" class="block relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+                {% if item.featured_image %}
+                  <img src="{{ item.featured_image | image_url: width: 600 }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="{{ item.title }}">
+                {% endif %}
+             </a>
+             <h3 class="font-bold text-base mb-1"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+             <p class="text-gray-500 text-sm">{{ item.price | money }}</p>
+          {% else %}
+             <div class="bg-gray-50 p-6 rounded h-full">
+               <h3 class="font-bold mb-2"><a href="{{ item.url }}">{{ item.title }}</a></h3>
+               <p class="text-sm text-gray-500">{{ item.content | strip_html | truncatewords: 20 }}</p>
+             </div>
+          {% endif %}
+        </div>
+      {% else %}
+        <p class="col-span-full text-center text-gray-500">No results found for "{{ search.terms }}".</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Search",
+  "settings": []
+}
+{% endschema %}

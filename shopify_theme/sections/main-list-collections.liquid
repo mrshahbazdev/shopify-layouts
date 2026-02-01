@@ -1,0 +1,27 @@
+<section class="container mx-auto px-6 py-20">
+  <h1 class="text-4xl font-serif font-bold text-center mb-16">Collections</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {% for collection in collections %}
+      <a href="{{ collection.url }}" class="group block relative overflow-hidden rounded-xl h-80">
+        {% if collection.image %}
+          <img src="{{ collection.image | image_url: width: 800 }}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="{{ collection.title }}">
+        {% else %}
+           {{ 'collection-1' | placeholder_svg_tag: 'absolute inset-0 w-full h-full object-cover bg-gray-200 group-hover:scale-110 transition duration-700' }}
+        {% endif %}
+
+        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h2 class="text-white text-3xl font-serif font-bold">{{ collection.title }}</h2>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "List Collections",
+  "settings": []
+}
+{% endschema %}

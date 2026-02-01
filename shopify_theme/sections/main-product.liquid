@@ -1,0 +1,80 @@
+<section class="container mx-auto px-6 py-20" itemscope itemtype="http://schema.org/Product">
+  <div class="flex flex-col md:flex-row gap-12 md:gap-20">
+
+    <!-- Product Images -->
+    <div class="w-full md:w-1/2">
+      {% if product.featured_image %}
+        <div class="mb-4 bg-gray-100 rounded-lg overflow-hidden">
+          <img src="{{ product.featured_image | image_url: width: 1200 }}" class="w-full h-auto object-cover" alt="{{ product.title }}">
+        </div>
+      {% endif %}
+
+      <div class="grid grid-cols-4 gap-4">
+        {% for media in product.media offset: 1 %}
+           <div class="bg-gray-100 rounded-lg overflow-hidden cursor-pointer hover:opacity-75 transition">
+             <img src="{{ media | image_url: width: 300 }}" class="w-full h-full object-cover" alt="{{ product.title }}">
+           </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="w-full md:w-1/2">
+      <h1 class="text-4xl font-serif font-bold mb-4">{{ product.title }}</h1>
+
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-2xl font-bold text-primary">{{ product.price | money }}</span>
+        {% if product.compare_at_price > product.price %}
+          <span class="text-gray-400 line-through text-lg">{{ product.compare_at_price | money }}</span>
+        {% endif %}
+      </div>
+
+      <div class="prose text-gray-600 mb-8">
+        {{ product.description }}
+      </div>
+
+      {% form 'product', product %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+        {% unless product.has_only_default_variant %}
+          <div class="mb-6 space-y-4">
+            {% for option in product.options_with_values %}
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-widest mb-2">{{ option.name }}</label>
+                <div class="flex flex-wrap gap-2">
+                  {% for value in option.values %}
+                    <label class="cursor-pointer">
+                      <input type="radio" name="options[{{ option.name }}]" value="{{ value }}" class="peer sr-only">
+                      <div class="px-4 py-2 border border-gray-200 rounded text-sm hover:border-black peer-checked:bg-black peer-checked:text-white transition">
+                        {{ value }}
+                      </div>
+                    </label>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        {% endunless %}
+
+        <div class="flex gap-4 mb-8">
+           <input type="number" name="quantity" value="1" min="1" class="w-20 border border-gray-300 rounded text-center py-3">
+           <button type="submit" class="flex-1 bg-primary text-white py-3 font-bold uppercase tracking-widest hover:bg-accent transition {% unless product.available %}opacity-50 cursor-not-allowed{% endunless %}" {% unless product.available %}disabled{% endunless %}>
+             {% if product.available %}Add to Cart{% else %}Sold Out{% endif %}
+           </button>
+        </div>
+      {% endform %}
+
+      <div class="border-t border-gray-200 pt-6 space-y-3 text-sm text-gray-500">
+        <p><i class="fas fa-truck mr-2"></i> Free shipping on orders over $150</p>
+        <p><i class="fas fa-undo mr-2"></i> 30-day return policy</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Product",
+  "settings": []
+}
+{% endschema %}

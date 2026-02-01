@@ -1,0 +1,19 @@
+<div class="container mx-auto px-6 py-32 text-center">
+  <h1 class="text-6xl font-serif font-bold mb-4">404</h1>
+  <p class="text-xl text-gray-500 mb-8">{{ section.settings.text }}</p>
+  <a href="{{ routes.root_url }}" class="bg-primary text-white px-8 py-3 font-bold uppercase tracking-widest hover:bg-accent transition">Return Home</a>
+</div>
+
+{% schema %}
+{
+  "name": "404 Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Page Not Found"
+    }
+  ]
+}
+{% endschema %}

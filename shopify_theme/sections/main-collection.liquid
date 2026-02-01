@@ -1,0 +1,36 @@
+<section class="container mx-auto px-6 py-20">
+  <header class="mb-12 text-center">
+    <h1 class="text-4xl font-serif font-bold mb-4">{{ collection.title }}</h1>
+    <div class="max-w-2xl mx-auto text-gray-500">{{ collection.description }}</div>
+  </header>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+    {% for product in collection.products %}
+      <div class="group">
+        <a href="{{ product.url }}" class="block relative overflow-hidden mb-4 bg-gray-100 aspect-[3/4]">
+          <img src="{{ product.featured_image | image_url: width: 600 }}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="{{ product.title }}">
+          {% unless product.available %}
+             <span class="absolute top-2 left-2 bg-gray-800 text-white text-xs px-2 py-1 font-bold uppercase">Sold Out</span>
+          {% endunless %}
+        </a>
+        <h3 class="font-bold text-base mb-1"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+        <p class="text-gray-500 text-sm">{{ product.price | money }}</p>
+      </div>
+    {% else %}
+      <p class="col-span-full text-center text-gray-500">No products found in this collection.</p>
+    {% endfor %}
+  </div>
+
+  {% if paginate.pages > 1 %}
+    <div class="mt-12 text-center">
+      {{ paginate | default_pagination }}
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "Collection",
+  "settings": []
+}
+{% endschema %}

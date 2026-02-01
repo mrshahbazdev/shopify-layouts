@@ -17,6 +17,12 @@
       },
       {
         "type": "color",
+        "id": "secondary_color",
+        "label": "Secondary Color",
+        "default": "#f4f4f5"
+      },
+      {
+        "type": "color",
         "id": "accent_color",
         "label": "Accent Color",
         "default": "#3b82f6"
