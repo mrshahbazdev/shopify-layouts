@@ -1,5 +1,485 @@
 {
-  "current": "Luxe Mega",
+  "current": {
+    "sections": {
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "heading": "Elevate Your \nEveryday Style",
+          "subheading": "New Collection 2024"
+        }
+      },
+      "video_bg": {
+        "type": "video-background",
+        "settings": {
+          "heading": "Experience Motion"
+        }
+      },
+      "logo_cloud": {
+        "type": "logo-cloud",
+        "blocks": {
+          "logo_1": {
+            "type": "logo",
+            "settings": {
+              "icon_class": "fab fa-vogue"
+            }
+          },
+          "logo_2": {
+            "type": "logo",
+            "settings": {
+              "icon_class": "fab fa-google"
+            }
+          },
+          "logo_3": {
+            "type": "logo",
+            "settings": {
+              "icon_class": "fab fa-spotify"
+            }
+          },
+          "logo_4": {
+            "type": "logo",
+            "settings": {
+              "icon_class": "fab fa-apple"
+            }
+          },
+          "logo_5": {
+            "type": "logo",
+            "settings": {
+              "icon_class": "fab fa-amazon"
+            }
+          }
+        },
+        "block_order": [
+          "logo_1",
+          "logo_2",
+          "logo_3",
+          "logo_4",
+          "logo_5"
+        ]
+      },
+      "featured_collection": {
+        "type": "featured-collection",
+        "settings": {
+          "title": "New Arrivals"
+        }
+      },
+      "split_feature": {
+        "type": "split-feature",
+        "settings": {
+          "title": "The Midnight Collection"
+        }
+      },
+      "marquee": {
+        "type": "marquee",
+        "settings": {
+          "text": "New Styles Added"
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slide_1": {
+            "type": "slide",
+            "settings": {
+              "heading": "Summer Vibes"
+            }
+          },
+          "slide_2": {
+            "type": "slide",
+            "settings": {
+              "heading": "Winter Warmth"
+            }
+          }
+        },
+        "block_order": [
+          "slide_1",
+          "slide_2"
+        ]
+      },
+      "categories": {
+        "type": "categories",
+        "blocks": {
+          "cat_1": {
+            "type": "category",
+            "settings": {
+              "title": "Dresses"
+            }
+          },
+          "cat_2": {
+            "type": "category",
+            "settings": {
+              "title": "Denim"
+            }
+          },
+          "cat_3": {
+            "type": "category",
+            "settings": {
+              "title": "Shoes"
+            }
+          },
+          "cat_4": {
+            "type": "category",
+            "settings": {
+              "title": "Accessories"
+            }
+          },
+          "cat_5": {
+            "type": "category",
+            "settings": {
+              "title": "Bags"
+            }
+          },
+          "cat_6": {
+            "type": "category",
+            "settings": {
+              "title": "Activewear"
+            }
+          }
+        },
+        "block_order": [
+          "cat_1",
+          "cat_2",
+          "cat_3",
+          "cat_4",
+          "cat_5",
+          "cat_6"
+        ]
+      },
+      "collection_tabs": {
+        "type": "collection-tabs",
+        "blocks": {
+          "tab_1": {
+            "type": "collection",
+            "settings": {
+              "title": "Best Sellers"
+            }
+          },
+          "tab_2": {
+            "type": "collection",
+            "settings": {
+              "title": "New In"
+            }
+          }
+        },
+        "block_order": [
+          "tab_1",
+          "tab_2"
+        ]
+      },
+      "product_spotlight": {
+        "type": "product-spotlight",
+        "settings": {}
+      },
+      "features_grid": {
+        "type": "features-grid",
+        "blocks": {
+          "feat_1": {
+            "type": "feature",
+            "settings": {
+              "icon": "fas fa-truck-moving",
+              "title": "Free Shipping"
+            }
+          },
+          "feat_2": {
+            "type": "feature",
+            "settings": {
+              "icon": "fas fa-undo",
+              "title": "Easy Returns"
+            }
+          },
+          "feat_3": {
+            "type": "feature",
+            "settings": {
+              "icon": "fas fa-lock",
+              "title": "Secure Payment"
+            }
+          },
+          "feat_4": {
+            "type": "feature",
+            "settings": {
+              "icon": "fas fa-headset",
+              "title": "24/7 Support"
+            }
+          }
+        },
+        "block_order": [
+          "feat_1",
+          "feat_2",
+          "feat_3",
+          "feat_4"
+        ]
+      },
+      "rich_text": {
+        "type": "rich-text",
+        "settings": {}
+      },
+      "deal_of_day": {
+        "type": "deal-of-day",
+        "settings": {}
+      },
+      "image_with_text": {
+        "type": "image-with-text",
+        "settings": {
+          "layout": "right"
+        }
+      },
+      "testimonials": {
+        "type": "testimonials",
+        "blocks": {
+          "test_1": {
+            "type": "testimonial",
+            "settings": {
+              "author": "Sarah Jenkins"
+            }
+          },
+          "test_2": {
+            "type": "testimonial",
+            "settings": {
+              "author": "Michael Ross"
+            }
+          },
+          "test_3": {
+            "type": "testimonial",
+            "settings": {
+              "author": "Emma Wilson"
+            }
+          }
+        },
+        "block_order": [
+          "test_1",
+          "test_2",
+          "test_3"
+        ]
+      },
+      "timeline": {
+        "type": "timeline",
+        "blocks": {
+          "m_1": {
+            "type": "milestone",
+            "settings": {
+              "year": "2015",
+              "title": "Launch"
+            }
+          },
+          "m_2": {
+            "type": "milestone",
+            "settings": {
+              "year": "2018",
+              "title": "Expansion"
+            }
+          },
+          "m_3": {
+            "type": "milestone",
+            "settings": {
+              "year": "2024",
+              "title": "Global"
+            }
+          }
+        },
+        "block_order": [
+          "m_1",
+          "m_2",
+          "m_3"
+        ]
+      },
+      "best_sellers": {
+        "type": "best-sellers",
+        "settings": {}
+      },
+      "pricing_table": {
+        "type": "pricing-table",
+        "blocks": {
+          "p_1": {
+            "type": "plan",
+            "settings": {
+              "title": "Basic"
+            }
+          },
+          "p_2": {
+            "type": "plan",
+            "settings": {
+              "title": "Pro",
+              "featured": true,
+              "price": "$29"
+            }
+          },
+          "p_3": {
+            "type": "plan",
+            "settings": {
+              "title": "Enterprise",
+              "price": "$99"
+            }
+          }
+        },
+        "block_order": [
+          "p_1",
+          "p_2",
+          "p_3"
+        ]
+      },
+      "lookbook": {
+        "type": "lookbook",
+        "blocks": {
+          "look_1": {
+            "type": "image"
+          },
+          "look_2": {
+            "type": "image"
+          },
+          "look_3": {
+            "type": "image"
+          },
+          "look_4": {
+            "type": "image"
+          },
+          "look_5": {
+            "type": "image"
+          },
+          "look_6": {
+            "type": "image"
+          }
+        },
+        "block_order": [
+          "look_1",
+          "look_2",
+          "look_3",
+          "look_4",
+          "look_5",
+          "look_6"
+        ]
+      },
+      "team": {
+        "type": "team",
+        "settings": {}
+      },
+      "contact_form": {
+        "type": "contact-form",
+        "settings": {}
+      },
+      "faq": {
+        "type": "faq",
+        "blocks": {
+          "faq_1": {
+            "type": "question",
+            "settings": {
+              "question": "How long does shipping take?"
+            }
+          },
+          "faq_2": {
+            "type": "question",
+            "settings": {
+              "question": "What is your return policy?"
+            }
+          },
+          "faq_3": {
+            "type": "question",
+            "settings": {
+              "question": "Do you ship internationally?"
+            }
+          }
+        },
+        "block_order": [
+          "faq_1",
+          "faq_2",
+          "faq_3"
+        ]
+      },
+      "map": {
+        "type": "map",
+        "settings": {}
+      },
+      "blog_posts": {
+        "type": "blog-posts",
+        "settings": {}
+      },
+      "gallery": {
+        "type": "gallery",
+        "blocks": {
+          "g_1": {
+            "type": "image"
+          },
+          "g_2": {
+            "type": "image"
+          },
+          "g_3": {
+            "type": "image"
+          },
+          "g_4": {
+            "type": "image"
+          }
+        },
+        "block_order": [
+          "g_1",
+          "g_2",
+          "g_3",
+          "g_4"
+        ]
+      },
+      "social_feed": {
+        "type": "social-feed",
+        "blocks": {
+          "soc_1": {
+            "type": "image"
+          },
+          "soc_2": {
+            "type": "image"
+          },
+          "soc_3": {
+            "type": "image"
+          },
+          "soc_4": {
+            "type": "image"
+          },
+          "soc_5": {
+            "type": "image"
+          },
+          "soc_6": {
+            "type": "image"
+          }
+        },
+        "block_order": [
+          "soc_1",
+          "soc_2",
+          "soc_3",
+          "soc_4",
+          "soc_5",
+          "soc_6"
+        ]
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {}
+      }
+    },
+    "content_for_index": [
+      "video_bg",
+      "hero",
+      "logo_cloud",
+      "featured_collection",
+      "slideshow",
+      "split_feature",
+      "rich_text",
+      "marquee",
+      "categories",
+      "collection_tabs",
+      "product_spotlight",
+      "image_with_text",
+      "features_grid",
+      "deal_of_day",
+      "timeline",
+      "testimonials",
+      "pricing_table",
+      "best_sellers",
+      "lookbook",
+      "team",
+      "gallery",
+      "contact_form",
+      "faq",
+      "map",
+      "blog_posts",
+      "social_feed",
+      "newsletter"
+    ]
+  },
   "presets": {
     "Luxe Mega": {
       "name": "Luxe Mega",
@@ -25,13 +505,44 @@
         "logo_cloud": {
           "type": "logo-cloud",
           "blocks": {
-            "logo_1": { "type": "logo", "settings": { "icon_class": "fab fa-vogue" } },
-            "logo_2": { "type": "logo", "settings": { "icon_class": "fab fa-google" } },
-            "logo_3": { "type": "logo", "settings": { "icon_class": "fab fa-spotify" } },
-            "logo_4": { "type": "logo", "settings": { "icon_class": "fab fa-apple" } },
-            "logo_5": { "type": "logo", "settings": { "icon_class": "fab fa-amazon" } }
+            "logo_1": {
+              "type": "logo",
+              "settings": {
+                "icon_class": "fab fa-vogue"
+              }
+            },
+            "logo_2": {
+              "type": "logo",
+              "settings": {
+                "icon_class": "fab fa-google"
+              }
+            },
+            "logo_3": {
+              "type": "logo",
+              "settings": {
+                "icon_class": "fab fa-spotify"
+              }
+            },
+            "logo_4": {
+              "type": "logo",
+              "settings": {
+                "icon_class": "fab fa-apple"
+              }
+            },
+            "logo_5": {
+              "type": "logo",
+              "settings": {
+                "icon_class": "fab fa-amazon"
+              }
+            }
           },
-          "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5"]
+          "block_order": [
+            "logo_1",
+            "logo_2",
+            "logo_3",
+            "logo_4",
+            "logo_5"
+          ]
         },
         "featured_collection": {
           "type": "featured-collection",
@@ -54,156 +565,377 @@
         "slideshow": {
           "type": "slideshow",
           "blocks": {
-            "slide_1": { "type": "slide", "settings": { "heading": "Summer Vibes" } },
-            "slide_2": { "type": "slide", "settings": { "heading": "Winter Warmth" } }
+            "slide_1": {
+              "type": "slide",
+              "settings": {
+                "heading": "Summer Vibes"
+              }
+            },
+            "slide_2": {
+              "type": "slide",
+              "settings": {
+                "heading": "Winter Warmth"
+              }
+            }
           },
-          "block_order": ["slide_1", "slide_2"]
+          "block_order": [
+            "slide_1",
+            "slide_2"
+          ]
         },
         "categories": {
           "type": "categories",
           "blocks": {
-            "cat_1": { "type": "category", "settings": { "title": "Dresses" } },
-            "cat_2": { "type": "category", "settings": { "title": "Denim" } },
-            "cat_3": { "type": "category", "settings": { "title": "Shoes" } },
-            "cat_4": { "type": "category", "settings": { "title": "Accessories" } },
-            "cat_5": { "type": "category", "settings": { "title": "Bags" } },
-            "cat_6": { "type": "category", "settings": { "title": "Activewear" } }
+            "cat_1": {
+              "type": "category",
+              "settings": {
+                "title": "Dresses"
+              }
+            },
+            "cat_2": {
+              "type": "category",
+              "settings": {
+                "title": "Denim"
+              }
+            },
+            "cat_3": {
+              "type": "category",
+              "settings": {
+                "title": "Shoes"
+              }
+            },
+            "cat_4": {
+              "type": "category",
+              "settings": {
+                "title": "Accessories"
+              }
+            },
+            "cat_5": {
+              "type": "category",
+              "settings": {
+                "title": "Bags"
+              }
+            },
+            "cat_6": {
+              "type": "category",
+              "settings": {
+                "title": "Activewear"
+              }
+            }
           },
-          "block_order": ["cat_1", "cat_2", "cat_3", "cat_4", "cat_5", "cat_6"]
+          "block_order": [
+            "cat_1",
+            "cat_2",
+            "cat_3",
+            "cat_4",
+            "cat_5",
+            "cat_6"
+          ]
         },
         "collection_tabs": {
           "type": "collection-tabs",
           "blocks": {
-            "tab_1": { "type": "collection", "settings": { "title": "Best Sellers" } },
-            "tab_2": { "type": "collection", "settings": { "title": "New In" } }
+            "tab_1": {
+              "type": "collection",
+              "settings": {
+                "title": "Best Sellers"
+              }
+            },
+            "tab_2": {
+              "type": "collection",
+              "settings": {
+                "title": "New In"
+              }
+            }
           },
-          "block_order": ["tab_1", "tab_2"]
+          "block_order": [
+            "tab_1",
+            "tab_2"
+          ]
         },
         "product_spotlight": {
           "type": "product-spotlight",
-          "settings": {
-          }
+          "settings": {}
         },
         "features_grid": {
           "type": "features-grid",
           "blocks": {
-            "feat_1": { "type": "feature", "settings": { "icon": "fas fa-truck-moving", "title": "Free Shipping" } },
-            "feat_2": { "type": "feature", "settings": { "icon": "fas fa-undo", "title": "Easy Returns" } },
-            "feat_3": { "type": "feature", "settings": { "icon": "fas fa-lock", "title": "Secure Payment" } },
-            "feat_4": { "type": "feature", "settings": { "icon": "fas fa-headset", "title": "24/7 Support" } }
+            "feat_1": {
+              "type": "feature",
+              "settings": {
+                "icon": "fas fa-truck-moving",
+                "title": "Free Shipping"
+              }
+            },
+            "feat_2": {
+              "type": "feature",
+              "settings": {
+                "icon": "fas fa-undo",
+                "title": "Easy Returns"
+              }
+            },
+            "feat_3": {
+              "type": "feature",
+              "settings": {
+                "icon": "fas fa-lock",
+                "title": "Secure Payment"
+              }
+            },
+            "feat_4": {
+              "type": "feature",
+              "settings": {
+                "icon": "fas fa-headset",
+                "title": "24/7 Support"
+              }
+            }
           },
-          "block_order": ["feat_1", "feat_2", "feat_3", "feat_4"]
+          "block_order": [
+            "feat_1",
+            "feat_2",
+            "feat_3",
+            "feat_4"
+          ]
         },
         "rich_text": {
-            "type": "rich-text",
-            "settings": {}
+          "type": "rich-text",
+          "settings": {}
         },
         "deal_of_day": {
           "type": "deal-of-day",
-          "settings": {
-          }
+          "settings": {}
         },
         "image_with_text": {
-            "type": "image-with-text",
-            "settings": { "layout": "right" }
+          "type": "image-with-text",
+          "settings": {
+            "layout": "right"
+          }
         },
         "testimonials": {
           "type": "testimonials",
           "blocks": {
-            "test_1": { "type": "testimonial", "settings": { "author": "Sarah Jenkins" } },
-            "test_2": { "type": "testimonial", "settings": { "author": "Michael Ross" } },
-            "test_3": { "type": "testimonial", "settings": { "author": "Emma Wilson" } }
+            "test_1": {
+              "type": "testimonial",
+              "settings": {
+                "author": "Sarah Jenkins"
+              }
+            },
+            "test_2": {
+              "type": "testimonial",
+              "settings": {
+                "author": "Michael Ross"
+              }
+            },
+            "test_3": {
+              "type": "testimonial",
+              "settings": {
+                "author": "Emma Wilson"
+              }
+            }
           },
-          "block_order": ["test_1", "test_2", "test_3"]
+          "block_order": [
+            "test_1",
+            "test_2",
+            "test_3"
+          ]
         },
         "timeline": {
-            "type": "timeline",
-            "blocks": {
-                "m_1": { "type": "milestone", "settings": { "year": "2015", "title": "Launch" } },
-                "m_2": { "type": "milestone", "settings": { "year": "2018", "title": "Expansion" } },
-                "m_3": { "type": "milestone", "settings": { "year": "2024", "title": "Global" } }
+          "type": "timeline",
+          "blocks": {
+            "m_1": {
+              "type": "milestone",
+              "settings": {
+                "year": "2015",
+                "title": "Launch"
+              }
             },
-            "block_order": ["m_1", "m_2", "m_3"]
+            "m_2": {
+              "type": "milestone",
+              "settings": {
+                "year": "2018",
+                "title": "Expansion"
+              }
+            },
+            "m_3": {
+              "type": "milestone",
+              "settings": {
+                "year": "2024",
+                "title": "Global"
+              }
+            }
+          },
+          "block_order": [
+            "m_1",
+            "m_2",
+            "m_3"
+          ]
         },
         "best_sellers": {
           "type": "best-sellers",
-          "settings": {
-          }
+          "settings": {}
         },
         "pricing_table": {
-            "type": "pricing-table",
-            "blocks": {
-                "p_1": { "type": "plan", "settings": { "title": "Basic" } },
-                "p_2": { "type": "plan", "settings": { "title": "Pro", "featured": true, "price": "$29" } },
-                "p_3": { "type": "plan", "settings": { "title": "Enterprise", "price": "$99" } }
+          "type": "pricing-table",
+          "blocks": {
+            "p_1": {
+              "type": "plan",
+              "settings": {
+                "title": "Basic"
+              }
             },
-            "block_order": ["p_1", "p_2", "p_3"]
+            "p_2": {
+              "type": "plan",
+              "settings": {
+                "title": "Pro",
+                "featured": true,
+                "price": "$29"
+              }
+            },
+            "p_3": {
+              "type": "plan",
+              "settings": {
+                "title": "Enterprise",
+                "price": "$99"
+              }
+            }
+          },
+          "block_order": [
+            "p_1",
+            "p_2",
+            "p_3"
+          ]
         },
         "lookbook": {
           "type": "lookbook",
           "blocks": {
-            "look_1": { "type": "image" },
-            "look_2": { "type": "image" },
-            "look_3": { "type": "image" },
-            "look_4": { "type": "image" },
-            "look_5": { "type": "image" },
-            "look_6": { "type": "image" }
+            "look_1": {
+              "type": "image"
+            },
+            "look_2": {
+              "type": "image"
+            },
+            "look_3": {
+              "type": "image"
+            },
+            "look_4": {
+              "type": "image"
+            },
+            "look_5": {
+              "type": "image"
+            },
+            "look_6": {
+              "type": "image"
+            }
           },
-          "block_order": ["look_1", "look_2", "look_3", "look_4", "look_5", "look_6"]
+          "block_order": [
+            "look_1",
+            "look_2",
+            "look_3",
+            "look_4",
+            "look_5",
+            "look_6"
+          ]
         },
         "team": {
           "type": "team",
-          "settings": {
-          }
+          "settings": {}
         },
         "contact_form": {
-            "type": "contact-form",
-            "settings": {}
+          "type": "contact-form",
+          "settings": {}
         },
         "faq": {
           "type": "faq",
           "blocks": {
-            "faq_1": { "type": "question", "settings": { "question": "How long does shipping take?" } },
-            "faq_2": { "type": "question", "settings": { "question": "What is your return policy?" } },
-            "faq_3": { "type": "question", "settings": { "question": "Do you ship internationally?" } }
+            "faq_1": {
+              "type": "question",
+              "settings": {
+                "question": "How long does shipping take?"
+              }
+            },
+            "faq_2": {
+              "type": "question",
+              "settings": {
+                "question": "What is your return policy?"
+              }
+            },
+            "faq_3": {
+              "type": "question",
+              "settings": {
+                "question": "Do you ship internationally?"
+              }
+            }
           },
-          "block_order": ["faq_1", "faq_2", "faq_3"]
+          "block_order": [
+            "faq_1",
+            "faq_2",
+            "faq_3"
+          ]
         },
         "map": {
-            "type": "map",
-            "settings": {}
+          "type": "map",
+          "settings": {}
         },
         "blog_posts": {
           "type": "blog-posts",
-          "settings": {
-          }
+          "settings": {}
         },
         "gallery": {
-            "type": "gallery",
-            "blocks": {
-                "g_1": { "type": "image" },
-                "g_2": { "type": "image" },
-                "g_3": { "type": "image" },
-                "g_4": { "type": "image" }
+          "type": "gallery",
+          "blocks": {
+            "g_1": {
+              "type": "image"
             },
-            "block_order": ["g_1", "g_2", "g_3", "g_4"]
+            "g_2": {
+              "type": "image"
+            },
+            "g_3": {
+              "type": "image"
+            },
+            "g_4": {
+              "type": "image"
+            }
+          },
+          "block_order": [
+            "g_1",
+            "g_2",
+            "g_3",
+            "g_4"
+          ]
         },
         "social_feed": {
           "type": "social-feed",
           "blocks": {
-            "soc_1": { "type": "image" },
-            "soc_2": { "type": "image" },
-            "soc_3": { "type": "image" },
-            "soc_4": { "type": "image" },
-            "soc_5": { "type": "image" },
-            "soc_6": { "type": "image" }
+            "soc_1": {
+              "type": "image"
+            },
+            "soc_2": {
+              "type": "image"
+            },
+            "soc_3": {
+              "type": "image"
+            },
+            "soc_4": {
+              "type": "image"
+            },
+            "soc_5": {
+              "type": "image"
+            },
+            "soc_6": {
+              "type": "image"
+            }
           },
-          "block_order": ["soc_1", "soc_2", "soc_3", "soc_4", "soc_5", "soc_6"]
+          "block_order": [
+            "soc_1",
+            "soc_2",
+            "soc_3",
+            "soc_4",
+            "soc_5",
+            "soc_6"
+          ]
         },
         "newsletter": {
           "type": "newsletter",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "content_for_index": [
